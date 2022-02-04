@@ -1787,7 +1787,7 @@
                 }
               ]
             },
-            "name": "array_length_t_array$_t_struct$_Guideline_$284_memory_ptr_$dyn_memory_ptr",
+            "name": "array_length_t_array$_t_struct$_Guideline_$285_memory_ptr_$dyn_memory_ptr",
             "nodeType": "YulFunctionDefinition",
             "parameters": [
               {
@@ -1873,7 +1873,7 @@
                 }
               ]
             },
-            "name": "array_storeLengthForEncoding_t_array$_t_struct$_Guideline_$284_memory_ptr_$dyn_memory_ptr_fromStack",
+            "name": "array_storeLengthForEncoding_t_array$_t_struct$_Guideline_$285_memory_ptr_$dyn_memory_ptr_fromStack",
             "nodeType": "YulFunctionDefinition",
             "parameters": [
               {
@@ -1956,7 +1956,7 @@
                 }
               ]
             },
-            "name": "array_dataslot_t_array$_t_struct$_Guideline_$284_memory_ptr_$dyn_memory_ptr",
+            "name": "array_dataslot_t_array$_t_struct$_Guideline_$285_memory_ptr_$dyn_memory_ptr",
             "nodeType": "YulFunctionDefinition",
             "parameters": [
               {
@@ -2596,7 +2596,7 @@
                 }
               ]
             },
-            "name": "abi_encode_t_struct$_Guideline_$284_memory_ptr_to_t_struct$_Guideline_$284_memory_ptr",
+            "name": "abi_encode_t_struct$_Guideline_$285_memory_ptr_to_t_struct$_Guideline_$285_memory_ptr",
             "nodeType": "YulFunctionDefinition",
             "parameters": [
               {
@@ -2644,7 +2644,7 @@
                       }
                     ],
                     "functionName": {
-                      "name": "abi_encode_t_struct$_Guideline_$284_memory_ptr_to_t_struct$_Guideline_$284_memory_ptr",
+                      "name": "abi_encode_t_struct$_Guideline_$285_memory_ptr_to_t_struct$_Guideline_$285_memory_ptr",
                       "nodeType": "YulIdentifier",
                       "src": "4914:85:7"
                     },
@@ -2661,7 +2661,7 @@
                 }
               ]
             },
-            "name": "abi_encodeUpdatedPos_t_struct$_Guideline_$284_memory_ptr_to_t_struct$_Guideline_$284_memory_ptr",
+            "name": "abi_encodeUpdatedPos_t_struct$_Guideline_$285_memory_ptr_to_t_struct$_Guideline_$285_memory_ptr",
             "nodeType": "YulFunctionDefinition",
             "parameters": [
               {
@@ -2728,7 +2728,7 @@
                 }
               ]
             },
-            "name": "array_nextElement_t_array$_t_struct$_Guideline_$284_memory_ptr_$dyn_memory_ptr",
+            "name": "array_nextElement_t_array$_t_struct$_Guideline_$285_memory_ptr_$dyn_memory_ptr",
             "nodeType": "YulFunctionDefinition",
             "parameters": [
               {
@@ -2765,7 +2765,7 @@
                       }
                     ],
                     "functionName": {
-                      "name": "array_length_t_array$_t_struct$_Guideline_$284_memory_ptr_$dyn_memory_ptr",
+                      "name": "array_length_t_array$_t_struct$_Guideline_$285_memory_ptr_$dyn_memory_ptr",
                       "nodeType": "YulIdentifier",
                       "src": "5439:73:7"
                     },
@@ -2798,7 +2798,7 @@
                       }
                     ],
                     "functionName": {
-                      "name": "array_storeLengthForEncoding_t_array$_t_struct$_Guideline_$284_memory_ptr_$dyn_memory_ptr_fromStack",
+                      "name": "array_storeLengthForEncoding_t_array$_t_struct$_Guideline_$285_memory_ptr_$dyn_memory_ptr_fromStack",
                       "nodeType": "YulIdentifier",
                       "src": "5535:99:7"
                     },
@@ -2893,7 +2893,7 @@
                       }
                     ],
                     "functionName": {
-                      "name": "array_dataslot_t_array$_t_struct$_Guideline_$284_memory_ptr_$dyn_memory_ptr",
+                      "name": "array_dataslot_t_array$_t_struct$_Guideline_$285_memory_ptr_$dyn_memory_ptr",
                       "nodeType": "YulIdentifier",
                       "src": "5748:75:7"
                     },
@@ -3017,7 +3017,7 @@
                             }
                           ],
                           "functionName": {
-                            "name": "abi_encodeUpdatedPos_t_struct$_Guideline_$284_memory_ptr_to_t_struct$_Guideline_$284_memory_ptr",
+                            "name": "abi_encodeUpdatedPos_t_struct$_Guideline_$285_memory_ptr_to_t_struct$_Guideline_$285_memory_ptr",
                             "nodeType": "YulIdentifier",
                             "src": "6044:95:7"
                           },
@@ -3044,7 +3044,7 @@
                             }
                           ],
                           "functionName": {
-                            "name": "array_nextElement_t_array$_t_struct$_Guideline_$284_memory_ptr_$dyn_memory_ptr",
+                            "name": "array_nextElement_t_array$_t_struct$_Guideline_$285_memory_ptr_$dyn_memory_ptr",
                             "nodeType": "YulIdentifier",
                             "src": "6183:78:7"
                           },
@@ -3218,7 +3218,7 @@
                 }
               ]
             },
-            "name": "abi_encode_t_array$_t_struct$_Guideline_$284_memory_ptr_$dyn_memory_ptr_to_t_array$_t_struct$_Guideline_$284_memory_ptr_$dyn_memory_ptr_fromStack",
+            "name": "abi_encode_t_array$_t_struct$_Guideline_$285_memory_ptr_$dyn_memory_ptr_to_t_array$_t_struct$_Guideline_$285_memory_ptr_$dyn_memory_ptr_fromStack",
             "nodeType": "YulFunctionDefinition",
             "parameters": [
               {
@@ -3359,7 +3359,7 @@
                       }
                     ],
                     "functionName": {
-                      "name": "abi_encode_t_array$_t_struct$_Guideline_$284_memory_ptr_$dyn_memory_ptr_to_t_array$_t_struct$_Guideline_$284_memory_ptr_$dyn_memory_ptr_fromStack",
+                      "name": "abi_encode_t_array$_t_struct$_Guideline_$285_memory_ptr_$dyn_memory_ptr_to_t_array$_t_struct$_Guideline_$285_memory_ptr_$dyn_memory_ptr_fromStack",
                       "nodeType": "YulIdentifier",
                       "src": "6674:145:7"
                     },
@@ -3376,7 +3376,7 @@
                 }
               ]
             },
-            "name": "abi_encode_tuple_t_array$_t_struct$_Guideline_$284_memory_ptr_$dyn_memory_ptr__to_t_array$_t_struct$_Guideline_$284_memory_ptr_$dyn_memory_ptr__fromStack_reversed",
+            "name": "abi_encode_tuple_t_array$_t_struct$_Guideline_$285_memory_ptr_$dyn_memory_ptr__to_t_array$_t_struct$_Guideline_$285_memory_ptr_$dyn_memory_ptr__fromStack_reversed",
             "nodeType": "YulFunctionDefinition",
             "parameters": [
               {
@@ -3819,7 +3819,7 @@
           }
         ]
       },
-      "contents": "{\n\n    function allocate_unbounded() -> memPtr {\n        memPtr := mload(64)\n    }\n\n    function revert_error_dbdddcbe895c83990c08b3492a0e83918d802a52331272ac6fdb6a7c4aea3b1b() {\n        revert(0, 0)\n    }\n\n    function revert_error_c1322bf8034eace5e0b5c7295db60986aa89aae5e0ea0873e4689e076861a5db() {\n        revert(0, 0)\n    }\n\n    function cleanup_t_uint256(value) -> cleaned {\n        cleaned := value\n    }\n\n    function validator_revert_t_uint256(value) {\n        if iszero(eq(value, cleanup_t_uint256(value))) { revert(0, 0) }\n    }\n\n    function abi_decode_t_uint256(offset, end) -> value {\n        value := calldataload(offset)\n        validator_revert_t_uint256(value)\n    }\n\n    function abi_decode_tuple_t_uint256(headStart, dataEnd) -> value0 {\n        if slt(sub(dataEnd, headStart), 32) { revert_error_dbdddcbe895c83990c08b3492a0e83918d802a52331272ac6fdb6a7c4aea3b1b() }\n\n        {\n\n            let offset := 0\n\n            value0 := abi_decode_t_uint256(add(headStart, offset), dataEnd)\n        }\n\n    }\n\n    function array_length_t_string_memory_ptr(value) -> length {\n\n        length := mload(value)\n\n    }\n\n    function array_storeLengthForEncoding_t_string_memory_ptr_fromStack(pos, length) -> updated_pos {\n        mstore(pos, length)\n        updated_pos := add(pos, 0x20)\n    }\n\n    function copy_memory_to_memory(src, dst, length) {\n        let i := 0\n        for { } lt(i, length) { i := add(i, 32) }\n        {\n            mstore(add(dst, i), mload(add(src, i)))\n        }\n        if gt(i, length)\n        {\n            // clear end\n            mstore(add(dst, length), 0)\n        }\n    }\n\n    function round_up_to_mul_of_32(value) -> result {\n        result := and(add(value, 31), not(31))\n    }\n\n    function abi_encode_t_string_memory_ptr_to_t_string_memory_ptr_fromStack(value, pos) -> end {\n        let length := array_length_t_string_memory_ptr(value)\n        pos := array_storeLengthForEncoding_t_string_memory_ptr_fromStack(pos, length)\n        copy_memory_to_memory(add(value, 0x20), pos, length)\n        end := add(pos, round_up_to_mul_of_32(length))\n    }\n\n    function abi_encode_tuple_t_string_memory_ptr_t_string_memory_ptr__to_t_string_memory_ptr_t_string_memory_ptr__fromStack_reversed(headStart , value1, value0) -> tail {\n        tail := add(headStart, 64)\n\n        mstore(add(headStart, 0), sub(tail, headStart))\n        tail := abi_encode_t_string_memory_ptr_to_t_string_memory_ptr_fromStack(value0,  tail)\n\n        mstore(add(headStart, 32), sub(tail, headStart))\n        tail := abi_encode_t_string_memory_ptr_to_t_string_memory_ptr_fromStack(value1,  tail)\n\n    }\n\n    function abi_encode_t_uint256_to_t_uint256_fromStack(value, pos) {\n        mstore(pos, cleanup_t_uint256(value))\n    }\n\n    function abi_encode_tuple_t_uint256__to_t_uint256__fromStack_reversed(headStart , value0) -> tail {\n        tail := add(headStart, 32)\n\n        abi_encode_t_uint256_to_t_uint256_fromStack(value0,  add(headStart, 0))\n\n    }\n\n    function array_length_t_array$_t_struct$_Guideline_$284_memory_ptr_$dyn_memory_ptr(value) -> length {\n\n        length := mload(value)\n\n    }\n\n    function array_storeLengthForEncoding_t_array$_t_struct$_Guideline_$284_memory_ptr_$dyn_memory_ptr_fromStack(pos, length) -> updated_pos {\n        mstore(pos, length)\n        updated_pos := add(pos, 0x20)\n    }\n\n    function array_dataslot_t_array$_t_struct$_Guideline_$284_memory_ptr_$dyn_memory_ptr(ptr) -> data {\n        data := ptr\n\n        data := add(ptr, 0x20)\n\n    }\n\n    function array_storeLengthForEncoding_t_string_memory_ptr(pos, length) -> updated_pos {\n        mstore(pos, length)\n        updated_pos := add(pos, 0x20)\n    }\n\n    function abi_encode_t_string_memory_ptr_to_t_string_memory_ptr(value, pos) -> end {\n        let length := array_length_t_string_memory_ptr(value)\n        pos := array_storeLengthForEncoding_t_string_memory_ptr(pos, length)\n        copy_memory_to_memory(add(value, 0x20), pos, length)\n        end := add(pos, round_up_to_mul_of_32(length))\n    }\n\n    // struct SacredCoin.Guideline -> struct SacredCoin.Guideline\n    function abi_encode_t_struct$_Guideline_$284_memory_ptr_to_t_struct$_Guideline_$284_memory_ptr(value, pos)  -> end  {\n        let tail := add(pos, 0x40)\n\n        {\n            // summary\n\n            let memberValue0 := mload(add(value, 0x00))\n\n            mstore(add(pos, 0x00), sub(tail, pos))\n            tail := abi_encode_t_string_memory_ptr_to_t_string_memory_ptr(memberValue0, tail)\n\n        }\n\n        {\n            // guideline\n\n            let memberValue0 := mload(add(value, 0x20))\n\n            mstore(add(pos, 0x20), sub(tail, pos))\n            tail := abi_encode_t_string_memory_ptr_to_t_string_memory_ptr(memberValue0, tail)\n\n        }\n\n        end := tail\n    }\n\n    function abi_encodeUpdatedPos_t_struct$_Guideline_$284_memory_ptr_to_t_struct$_Guideline_$284_memory_ptr(value0, pos) -> updatedPos {\n        updatedPos := abi_encode_t_struct$_Guideline_$284_memory_ptr_to_t_struct$_Guideline_$284_memory_ptr(value0, pos)\n    }\n\n    function array_nextElement_t_array$_t_struct$_Guideline_$284_memory_ptr_$dyn_memory_ptr(ptr) -> next {\n        next := add(ptr, 0x20)\n    }\n\n    // struct SacredCoin.Guideline[] -> struct SacredCoin.Guideline[]\n    function abi_encode_t_array$_t_struct$_Guideline_$284_memory_ptr_$dyn_memory_ptr_to_t_array$_t_struct$_Guideline_$284_memory_ptr_$dyn_memory_ptr_fromStack(value, pos)  -> end  {\n        let length := array_length_t_array$_t_struct$_Guideline_$284_memory_ptr_$dyn_memory_ptr(value)\n        pos := array_storeLengthForEncoding_t_array$_t_struct$_Guideline_$284_memory_ptr_$dyn_memory_ptr_fromStack(pos, length)\n        let headStart := pos\n        let tail := add(pos, mul(length, 0x20))\n        let baseRef := array_dataslot_t_array$_t_struct$_Guideline_$284_memory_ptr_$dyn_memory_ptr(value)\n        let srcPtr := baseRef\n        for { let i := 0 } lt(i, length) { i := add(i, 1) }\n        {\n            mstore(pos, sub(tail, headStart))\n            let elementValue0 := mload(srcPtr)\n            tail := abi_encodeUpdatedPos_t_struct$_Guideline_$284_memory_ptr_to_t_struct$_Guideline_$284_memory_ptr(elementValue0, tail)\n            srcPtr := array_nextElement_t_array$_t_struct$_Guideline_$284_memory_ptr_$dyn_memory_ptr(srcPtr)\n            pos := add(pos, 0x20)\n        }\n        pos := tail\n        end := pos\n    }\n\n    function abi_encode_tuple_t_array$_t_struct$_Guideline_$284_memory_ptr_$dyn_memory_ptr__to_t_array$_t_struct$_Guideline_$284_memory_ptr_$dyn_memory_ptr__fromStack_reversed(headStart , value0) -> tail {\n        tail := add(headStart, 32)\n\n        mstore(add(headStart, 0), sub(tail, headStart))\n        tail := abi_encode_t_array$_t_struct$_Guideline_$284_memory_ptr_$dyn_memory_ptr_to_t_array$_t_struct$_Guideline_$284_memory_ptr_$dyn_memory_ptr_fromStack(value0,  tail)\n\n    }\n\n    function panic_error_0x32() {\n        mstore(0, 35408467139433450592217433187231851964531694900788300625387963629091585785856)\n        mstore(4, 0x32)\n        revert(0, 0x24)\n    }\n\n    function panic_error_0x22() {\n        mstore(0, 35408467139433450592217433187231851964531694900788300625387963629091585785856)\n        mstore(4, 0x22)\n        revert(0, 0x24)\n    }\n\n    function extract_byte_array_length(data) -> length {\n        length := div(data, 2)\n        let outOfPlaceEncoding := and(data, 1)\n        if iszero(outOfPlaceEncoding) {\n            length := and(length, 0x7f)\n        }\n\n        if eq(outOfPlaceEncoding, lt(length, 32)) {\n            panic_error_0x22()\n        }\n    }\n\n}\n",
+      "contents": "{\n\n    function allocate_unbounded() -> memPtr {\n        memPtr := mload(64)\n    }\n\n    function revert_error_dbdddcbe895c83990c08b3492a0e83918d802a52331272ac6fdb6a7c4aea3b1b() {\n        revert(0, 0)\n    }\n\n    function revert_error_c1322bf8034eace5e0b5c7295db60986aa89aae5e0ea0873e4689e076861a5db() {\n        revert(0, 0)\n    }\n\n    function cleanup_t_uint256(value) -> cleaned {\n        cleaned := value\n    }\n\n    function validator_revert_t_uint256(value) {\n        if iszero(eq(value, cleanup_t_uint256(value))) { revert(0, 0) }\n    }\n\n    function abi_decode_t_uint256(offset, end) -> value {\n        value := calldataload(offset)\n        validator_revert_t_uint256(value)\n    }\n\n    function abi_decode_tuple_t_uint256(headStart, dataEnd) -> value0 {\n        if slt(sub(dataEnd, headStart), 32) { revert_error_dbdddcbe895c83990c08b3492a0e83918d802a52331272ac6fdb6a7c4aea3b1b() }\n\n        {\n\n            let offset := 0\n\n            value0 := abi_decode_t_uint256(add(headStart, offset), dataEnd)\n        }\n\n    }\n\n    function array_length_t_string_memory_ptr(value) -> length {\n\n        length := mload(value)\n\n    }\n\n    function array_storeLengthForEncoding_t_string_memory_ptr_fromStack(pos, length) -> updated_pos {\n        mstore(pos, length)\n        updated_pos := add(pos, 0x20)\n    }\n\n    function copy_memory_to_memory(src, dst, length) {\n        let i := 0\n        for { } lt(i, length) { i := add(i, 32) }\n        {\n            mstore(add(dst, i), mload(add(src, i)))\n        }\n        if gt(i, length)\n        {\n            // clear end\n            mstore(add(dst, length), 0)\n        }\n    }\n\n    function round_up_to_mul_of_32(value) -> result {\n        result := and(add(value, 31), not(31))\n    }\n\n    function abi_encode_t_string_memory_ptr_to_t_string_memory_ptr_fromStack(value, pos) -> end {\n        let length := array_length_t_string_memory_ptr(value)\n        pos := array_storeLengthForEncoding_t_string_memory_ptr_fromStack(pos, length)\n        copy_memory_to_memory(add(value, 0x20), pos, length)\n        end := add(pos, round_up_to_mul_of_32(length))\n    }\n\n    function abi_encode_tuple_t_string_memory_ptr_t_string_memory_ptr__to_t_string_memory_ptr_t_string_memory_ptr__fromStack_reversed(headStart , value1, value0) -> tail {\n        tail := add(headStart, 64)\n\n        mstore(add(headStart, 0), sub(tail, headStart))\n        tail := abi_encode_t_string_memory_ptr_to_t_string_memory_ptr_fromStack(value0,  tail)\n\n        mstore(add(headStart, 32), sub(tail, headStart))\n        tail := abi_encode_t_string_memory_ptr_to_t_string_memory_ptr_fromStack(value1,  tail)\n\n    }\n\n    function abi_encode_t_uint256_to_t_uint256_fromStack(value, pos) {\n        mstore(pos, cleanup_t_uint256(value))\n    }\n\n    function abi_encode_tuple_t_uint256__to_t_uint256__fromStack_reversed(headStart , value0) -> tail {\n        tail := add(headStart, 32)\n\n        abi_encode_t_uint256_to_t_uint256_fromStack(value0,  add(headStart, 0))\n\n    }\n\n    function array_length_t_array$_t_struct$_Guideline_$285_memory_ptr_$dyn_memory_ptr(value) -> length {\n\n        length := mload(value)\n\n    }\n\n    function array_storeLengthForEncoding_t_array$_t_struct$_Guideline_$285_memory_ptr_$dyn_memory_ptr_fromStack(pos, length) -> updated_pos {\n        mstore(pos, length)\n        updated_pos := add(pos, 0x20)\n    }\n\n    function array_dataslot_t_array$_t_struct$_Guideline_$285_memory_ptr_$dyn_memory_ptr(ptr) -> data {\n        data := ptr\n\n        data := add(ptr, 0x20)\n\n    }\n\n    function array_storeLengthForEncoding_t_string_memory_ptr(pos, length) -> updated_pos {\n        mstore(pos, length)\n        updated_pos := add(pos, 0x20)\n    }\n\n    function abi_encode_t_string_memory_ptr_to_t_string_memory_ptr(value, pos) -> end {\n        let length := array_length_t_string_memory_ptr(value)\n        pos := array_storeLengthForEncoding_t_string_memory_ptr(pos, length)\n        copy_memory_to_memory(add(value, 0x20), pos, length)\n        end := add(pos, round_up_to_mul_of_32(length))\n    }\n\n    // struct SacredCoin.Guideline -> struct SacredCoin.Guideline\n    function abi_encode_t_struct$_Guideline_$285_memory_ptr_to_t_struct$_Guideline_$285_memory_ptr(value, pos)  -> end  {\n        let tail := add(pos, 0x40)\n\n        {\n            // summary\n\n            let memberValue0 := mload(add(value, 0x00))\n\n            mstore(add(pos, 0x00), sub(tail, pos))\n            tail := abi_encode_t_string_memory_ptr_to_t_string_memory_ptr(memberValue0, tail)\n\n        }\n\n        {\n            // guideline\n\n            let memberValue0 := mload(add(value, 0x20))\n\n            mstore(add(pos, 0x20), sub(tail, pos))\n            tail := abi_encode_t_string_memory_ptr_to_t_string_memory_ptr(memberValue0, tail)\n\n        }\n\n        end := tail\n    }\n\n    function abi_encodeUpdatedPos_t_struct$_Guideline_$285_memory_ptr_to_t_struct$_Guideline_$285_memory_ptr(value0, pos) -> updatedPos {\n        updatedPos := abi_encode_t_struct$_Guideline_$285_memory_ptr_to_t_struct$_Guideline_$285_memory_ptr(value0, pos)\n    }\n\n    function array_nextElement_t_array$_t_struct$_Guideline_$285_memory_ptr_$dyn_memory_ptr(ptr) -> next {\n        next := add(ptr, 0x20)\n    }\n\n    // struct SacredCoin.Guideline[] -> struct SacredCoin.Guideline[]\n    function abi_encode_t_array$_t_struct$_Guideline_$285_memory_ptr_$dyn_memory_ptr_to_t_array$_t_struct$_Guideline_$285_memory_ptr_$dyn_memory_ptr_fromStack(value, pos)  -> end  {\n        let length := array_length_t_array$_t_struct$_Guideline_$285_memory_ptr_$dyn_memory_ptr(value)\n        pos := array_storeLengthForEncoding_t_array$_t_struct$_Guideline_$285_memory_ptr_$dyn_memory_ptr_fromStack(pos, length)\n        let headStart := pos\n        let tail := add(pos, mul(length, 0x20))\n        let baseRef := array_dataslot_t_array$_t_struct$_Guideline_$285_memory_ptr_$dyn_memory_ptr(value)\n        let srcPtr := baseRef\n        for { let i := 0 } lt(i, length) { i := add(i, 1) }\n        {\n            mstore(pos, sub(tail, headStart))\n            let elementValue0 := mload(srcPtr)\n            tail := abi_encodeUpdatedPos_t_struct$_Guideline_$285_memory_ptr_to_t_struct$_Guideline_$285_memory_ptr(elementValue0, tail)\n            srcPtr := array_nextElement_t_array$_t_struct$_Guideline_$285_memory_ptr_$dyn_memory_ptr(srcPtr)\n            pos := add(pos, 0x20)\n        }\n        pos := tail\n        end := pos\n    }\n\n    function abi_encode_tuple_t_array$_t_struct$_Guideline_$285_memory_ptr_$dyn_memory_ptr__to_t_array$_t_struct$_Guideline_$285_memory_ptr_$dyn_memory_ptr__fromStack_reversed(headStart , value0) -> tail {\n        tail := add(headStart, 32)\n\n        mstore(add(headStart, 0), sub(tail, headStart))\n        tail := abi_encode_t_array$_t_struct$_Guideline_$285_memory_ptr_$dyn_memory_ptr_to_t_array$_t_struct$_Guideline_$285_memory_ptr_$dyn_memory_ptr_fromStack(value0,  tail)\n\n    }\n\n    function panic_error_0x32() {\n        mstore(0, 35408467139433450592217433187231851964531694900788300625387963629091585785856)\n        mstore(4, 0x32)\n        revert(0, 0x24)\n    }\n\n    function panic_error_0x22() {\n        mstore(0, 35408467139433450592217433187231851964531694900788300625387963629091585785856)\n        mstore(4, 0x22)\n        revert(0, 0x24)\n    }\n\n    function extract_byte_array_length(data) -> length {\n        length := div(data, 2)\n        let outOfPlaceEncoding := and(data, 1)\n        if iszero(outOfPlaceEncoding) {\n            length := and(length, 0x7f)\n        }\n\n        if eq(outOfPlaceEncoding, lt(length, 32)) {\n            panic_error_0x22()\n        }\n    }\n\n}\n",
       "id": 7,
       "language": "Yul",
       "name": "#utility.yul"
@@ -3828,20 +3828,20 @@
   "sourceMap": "663:2616:2:-:0;;;;;;;;;;;;;;;;;;;",
   "deployedSourceMap": "663:2616:2:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;2820:178;;;;;;;;;;;;;:::i;:::-;;:::i;:::-;;;;;;;;:::i;:::-;;;;;;;;692:30;;;:::i;:::-;;;;;;;:::i;:::-;;;;;;;;1153:29;;;;;;;;;;;;;:::i;:::-;;:::i;:::-;;;;;;;;:::i;:::-;;;;;;;;3167:109;;;:::i;:::-;;;;;;;:::i;:::-;;;;;;;;2820:178;2884:13;2899;2933:10;2944:6;2933:18;;;;;;;;:::i;:::-;;;;;;;;;;;;:26;;2961:10;2972:6;2961:18;;;;;;;;:::i;:::-;;;;;;;;;;;;:28;;2925:65;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;2820:178;;;:::o;692:30::-;;;;:::o;1153:29::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;3167:109::-;3218:18;3257:10;3249:19;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;3167:109;:::o;88:117:7:-;197:1;194;187:12;334:77;371:7;400:5;389:16;;334:77;;;:::o;417:122::-;490:24;508:5;490:24;:::i;:::-;483:5;480:35;470:63;;529:1;526;519:12;470:63;417:122;:::o;545:139::-;591:5;629:6;616:20;607:29;;645:33;672:5;645:33;:::i;:::-;545:139;;;;:::o;690:329::-;749:6;798:2;786:9;777:7;773:23;769:32;766:119;;;804:79;;:::i;:::-;766:119;924:1;949:53;994:7;985:6;974:9;970:22;949:53;:::i;:::-;939:63;;895:117;690:329;;;;:::o;1025:99::-;1077:6;1111:5;1105:12;1095:22;;1025:99;;;:::o;1130:169::-;1214:11;1248:6;1243:3;1236:19;1288:4;1283:3;1279:14;1264:29;;1130:169;;;;:::o;1305:307::-;1373:1;1383:113;1397:6;1394:1;1391:13;1383:113;;;1482:1;1477:3;1473:11;1467:18;1463:1;1458:3;1454:11;1447:39;1419:2;1416:1;1412:10;1407:15;;1383:113;;;1514:6;1511:1;1508:13;1505:101;;;1594:1;1585:6;1580:3;1576:16;1569:27;1505:101;1354:258;1305:307;;;:::o;1618:102::-;1659:6;1710:2;1706:7;1701:2;1694:5;1690:14;1686:28;1676:38;;1618:102;;;:::o;1726:364::-;1814:3;1842:39;1875:5;1842:39;:::i;:::-;1897:71;1961:6;1956:3;1897:71;:::i;:::-;1890:78;;1977:52;2022:6;2017:3;2010:4;2003:5;1999:16;1977:52;:::i;:::-;2054:29;2076:6;2054:29;:::i;:::-;2049:3;2045:39;2038:46;;1818:272;1726:364;;;;:::o;2096:514::-;2257:4;2295:2;2284:9;2280:18;2272:26;;2344:9;2338:4;2334:20;2330:1;2319:9;2315:17;2308:47;2372:78;2445:4;2436:6;2372:78;:::i;:::-;2364:86;;2497:9;2491:4;2487:20;2482:2;2471:9;2467:18;2460:48;2525:78;2598:4;2589:6;2525:78;:::i;:::-;2517:86;;2096:514;;;;;:::o;2616:118::-;2703:24;2721:5;2703:24;:::i;:::-;2698:3;2691:37;2616:118;;:::o;2740:222::-;2833:4;2871:2;2860:9;2856:18;2848:26;;2884:71;2952:1;2941:9;2937:17;2928:6;2884:71;:::i;:::-;2740:222;;;;:::o;2968:140::-;3061:6;3095:5;3089:12;3079:22;;2968:140;;;:::o;3114:210::-;3239:11;3273:6;3268:3;3261:19;3313:4;3308:3;3304:14;3289:29;;3114:210;;;;:::o;3330:158::-;3423:4;3446:3;3438:11;;3476:4;3471:3;3467:14;3459:22;;3330:158;;;:::o;3494:159::-;3568:11;3602:6;3597:3;3590:19;3642:4;3637:3;3633:14;3618:29;;3494:159;;;;:::o;3659:344::-;3737:3;3765:39;3798:5;3765:39;:::i;:::-;3820:61;3874:6;3869:3;3820:61;:::i;:::-;3813:68;;3890:52;3935:6;3930:3;3923:4;3916:5;3912:16;3890:52;:::i;:::-;3967:29;3989:6;3967:29;:::i;:::-;3962:3;3958:39;3951:46;;3741:262;3659:344;;;;:::o;4075:677::-;4186:3;4222:4;4217:3;4213:14;4312:4;4305:5;4301:16;4295:23;4365:3;4359:4;4355:14;4348:4;4343:3;4339:14;4332:38;4391:73;4459:4;4445:12;4391:73;:::i;:::-;4383:81;;4237:238;4562:4;4555:5;4551:16;4545:23;4615:3;4609:4;4605:14;4598:4;4593:3;4589:14;4582:38;4641:73;4709:4;4695:12;4641:73;:::i;:::-;4633:81;;4485:240;4742:4;4735:11;;4191:561;4075:677;;;;:::o;4758:260::-;4879:10;4914:98;5008:3;5000:6;4914:98;:::i;:::-;4900:112;;4758:260;;;;:::o;5024:139::-;5120:4;5152;5147:3;5143:14;5135:22;;5024:139;;;:::o;5239:1119::-;5410:3;5439:80;5513:5;5439:80;:::i;:::-;5535:112;5640:6;5635:3;5535:112;:::i;:::-;5528:119;;5673:3;5718:4;5710:6;5706:17;5701:3;5697:27;5748:82;5824:5;5748:82;:::i;:::-;5853:7;5884:1;5869:444;5894:6;5891:1;5888:13;5869:444;;;5965:9;5959:4;5955:20;5950:3;5943:33;6016:6;6010:13;6044:116;6155:4;6140:13;6044:116;:::i;:::-;6036:124;;6183:86;6262:6;6183:86;:::i;:::-;6173:96;;6298:4;6293:3;6289:14;6282:21;;5929:384;5916:1;5913;5909:9;5904:14;;5869:444;;;5873:14;6329:4;6322:11;;6349:3;6342:10;;5415:943;;;;;5239:1119;;;;:::o;6364:477::-;6559:4;6597:2;6586:9;6582:18;6574:26;;6646:9;6640:4;6636:20;6632:1;6621:9;6617:17;6610:47;6674:160;6829:4;6820:6;6674:160;:::i;:::-;6666:168;;6364:477;;;;:::o;6847:180::-;6895:77;6892:1;6885:88;6992:4;6989:1;6982:15;7016:4;7013:1;7006:15;7033:180;7081:77;7078:1;7071:88;7178:4;7175:1;7168:15;7202:4;7199:1;7192:15;7219:320;7263:6;7300:1;7294:4;7290:12;7280:22;;7347:1;7341:4;7337:12;7368:18;7358:81;;7424:4;7416:6;7412:17;7402:27;;7358:81;7486:2;7478:6;7475:14;7455:18;7452:38;7449:84;;;7505:18;;:::i;:::-;7449:84;7270:269;7219:320;;;:::o",
   "source": "// SPDX-License-Identifier: MIT\r\n// Sacred Coin Protocol v0.1.0\r\n\r\npragma solidity ^0.8.9;\r\n\r\n/**\r\n * @title Sacred Coin Protocol v0.1.0\r\n *\r\n * @dev A protocol to build an ERC20 token that allows for the creation of guidelines,\r\n * or recommendations on how to use the coin that are intended for the those who interact with it.\r\n *\r\n * Works in conjunction with an ERC20 implementation, such as the OpenZeppelin ERC20 contract.\r\n *\r\n * To understand the philosophy behind it, visit:\r\n * https://sacredcoinprotocol.com\r\n *\r\n * To see examples on how to use this contract go to the GitHub page:\r\n * https://github.com/tokenosopher/sacred-coin-protocol\r\n *\r\n */\r\n\r\ncontract SacredCoin {\r\n\r\n    uint public numberOfGuidelines;\r\n\r\n    /**\r\n    * @dev A string that holds all of the guidelines, for easy retrieval.\r\n    */\r\n    string [] private mergedGuidelines;\r\n\r\n    /**\r\n    * @dev The Guideline struct. Each guideline wil be stored in one.\r\n    */\r\n    struct Guideline {\r\n        string summary;\r\n        string guideline;\r\n    }\r\n\r\n    /**\r\n    * @dev An array of Guideline structs that stores all of the guidelines, for easy retrieval.\r\n    */\r\n    Guideline[] public guidelines;\r\n\r\n    /**\r\n    * @dev An event that records the fact that a guideline has been created.\r\n    * Because coin guidelines need to be explicitly stated during the coin creation,\r\n    * this event only gets emitted when the coin is created, one event per guideline.\r\n    */\r\n    event GuidelineCreated(string guidelineSummary, string guideline);\r\n\r\n    /**\r\n    * @dev The main function of the contract. Should be called in the constructor function of the coin\r\n    *\r\n    * @param _guidelineSummary A summary of the guideline. The summary can be used as a title for\r\n    * the guideline when it is retrieved and displayed on a front-end.\r\n    *\r\n    * @param _guideline The guideline itself.\r\n    */\r\n    function setGuideline(string memory _guidelineSummary, string memory _guideline) internal {\r\n\r\n        /**\r\n        * @dev creating a new struct instance of the type Guideline and storing it in memory.\r\n        */\r\n        Guideline memory guideline = Guideline(_guidelineSummary, _guideline);\r\n\r\n        /**\r\n        * @dev pushing the struct created above in the guideline_struct array.\r\n        */\r\n        guidelines.push(guideline);\r\n\r\n\r\n        /**\r\n        * @dev Emit the GuidelineCreated event.\r\n        */\r\n        emit GuidelineCreated(_guidelineSummary, _guideline);\r\n\r\n        /**\r\n        * @dev Increment numberOfGuidelines by one.\r\n        */\r\n        numberOfGuidelines++;\r\n    }\r\n\r\n    /**\r\n    * @dev Function that returns a single guideline.\r\n    * The element at location 0 of the array will store the guideline summary.\r\n    * The element at location 1 of the array will store the guideline itself.\r\n    */\r\n    function returnSingleGuideline(uint _index) public view returns(string memory, string memory) {\r\n        return (guidelines[_index].summary, guidelines[_index].guideline);\r\n    }\r\n\r\n    /**\r\n    * @dev Function that returns all guidelines.\r\n    * This allows iterating over all guidelines for the purpose of retrieval and/or display.\r\n    */\r\n    function returnAllGuidelines() public view returns(Guideline[] memory) {\r\n        return (guidelines);\r\n    }\r\n}\r\n",
-  "sourcePath": "C:\\code\\better_times_token_and_sacred_farm_backend\\contracts\\SacredCoin.sol",
+  "sourcePath": "C:\\code\\better_times_token_and_sacred_farm_backendd\\contracts\\SacredCoin.sol",
   "ast": {
     "absolutePath": "project:/contracts/SacredCoin.sol",
     "exportedSymbols": {
       "SacredCoin": [
-        362
+        363
       ]
     },
-    "id": 363,
+    "id": 364,
     "license": "MIT",
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 272,
+        "id": 273,
         "literals": [
           "solidity",
           "^",
@@ -3858,15 +3858,15 @@
         "contractDependencies": [],
         "contractKind": "contract",
         "documentation": {
-          "id": 273,
+          "id": 274,
           "nodeType": "StructuredDocumentation",
           "src": "94:565:2",
           "text": " @title Sacred Coin Protocol v0.1.0\n @dev A protocol to build an ERC20 token that allows for the creation of guidelines,\n or recommendations on how to use the coin that are intended for the those who interact with it.\n Works in conjunction with an ERC20 implementation, such as the OpenZeppelin ERC20 contract.\n To understand the philosophy behind it, visit:\n https://sacredcoinprotocol.com\n To see examples on how to use this contract go to the GitHub page:\n https://github.com/tokenosopher/sacred-coin-protocol"
         },
         "fullyImplemented": true,
-        "id": 362,
+        "id": 363,
         "linearizedBaseContracts": [
-          362
+          363
         ],
         "name": "SacredCoin",
         "nameLocation": "672:10:2",
@@ -3875,12 +3875,12 @@
           {
             "constant": false,
             "functionSelector": "9ede4fc0",
-            "id": 275,
+            "id": 276,
             "mutability": "mutable",
             "name": "numberOfGuidelines",
             "nameLocation": "704:18:2",
             "nodeType": "VariableDeclaration",
-            "scope": 362,
+            "scope": 363,
             "src": "692:30:2",
             "stateVariable": true,
             "storageLocation": "default",
@@ -3889,7 +3889,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 274,
+              "id": 275,
               "name": "uint",
               "nodeType": "ElementaryTypeName",
               "src": "692:4:2",
@@ -3903,17 +3903,17 @@
           {
             "constant": false,
             "documentation": {
-              "id": 276,
+              "id": 277,
               "nodeType": "StructuredDocumentation",
               "src": "731:86:2",
               "text": " @dev A string that holds all of the guidelines, for easy retrieval."
             },
-            "id": 279,
+            "id": 280,
             "mutability": "mutable",
             "name": "mergedGuidelines",
             "nameLocation": "841:16:2",
             "nodeType": "VariableDeclaration",
-            "scope": 362,
+            "scope": 363,
             "src": "823:34:2",
             "stateVariable": true,
             "storageLocation": "default",
@@ -3923,7 +3923,7 @@
             },
             "typeName": {
               "baseType": {
-                "id": 277,
+                "id": 278,
                 "name": "string",
                 "nodeType": "ElementaryTypeName",
                 "src": "823:6:2",
@@ -3932,7 +3932,7 @@
                   "typeString": "string"
                 }
               },
-              "id": 278,
+              "id": 279,
               "nodeType": "ArrayTypeName",
               "src": "823:9:2",
               "typeDescriptions": {
@@ -3944,16 +3944,16 @@
           },
           {
             "canonicalName": "SacredCoin.Guideline",
-            "id": 284,
+            "id": 285,
             "members": [
               {
                 "constant": false,
-                "id": 281,
+                "id": 282,
                 "mutability": "mutable",
                 "name": "summary",
                 "nameLocation": "989:7:2",
                 "nodeType": "VariableDeclaration",
-                "scope": 284,
+                "scope": 285,
                 "src": "982:14:2",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -3962,7 +3962,7 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 280,
+                  "id": 281,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
                   "src": "982:6:2",
@@ -3975,12 +3975,12 @@
               },
               {
                 "constant": false,
-                "id": 283,
+                "id": 284,
                 "mutability": "mutable",
                 "name": "guideline",
                 "nameLocation": "1014:9:2",
                 "nodeType": "VariableDeclaration",
-                "scope": 284,
+                "scope": 285,
                 "src": "1007:16:2",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -3989,7 +3989,7 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 282,
+                  "id": 283,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
                   "src": "1007:6:2",
@@ -4004,55 +4004,55 @@
             "name": "Guideline",
             "nameLocation": "961:9:2",
             "nodeType": "StructDefinition",
-            "scope": 362,
+            "scope": 363,
             "src": "954:77:2",
             "visibility": "public"
           },
           {
             "constant": false,
             "documentation": {
-              "id": 285,
+              "id": 286,
               "nodeType": "StructuredDocumentation",
               "src": "1039:108:2",
               "text": " @dev An array of Guideline structs that stores all of the guidelines, for easy retrieval."
             },
             "functionSelector": "e2bff3ba",
-            "id": 289,
+            "id": 290,
             "mutability": "mutable",
             "name": "guidelines",
             "nameLocation": "1172:10:2",
             "nodeType": "VariableDeclaration",
-            "scope": 362,
+            "scope": 363,
             "src": "1153:29:2",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_array$_t_struct$_Guideline_$284_storage_$dyn_storage",
+              "typeIdentifier": "t_array$_t_struct$_Guideline_$285_storage_$dyn_storage",
               "typeString": "struct SacredCoin.Guideline[]"
             },
             "typeName": {
               "baseType": {
-                "id": 287,
+                "id": 288,
                 "nodeType": "UserDefinedTypeName",
                 "pathNode": {
-                  "id": 286,
+                  "id": 287,
                   "name": "Guideline",
                   "nodeType": "IdentifierPath",
-                  "referencedDeclaration": 284,
+                  "referencedDeclaration": 285,
                   "src": "1153:9:2"
                 },
-                "referencedDeclaration": 284,
+                "referencedDeclaration": 285,
                 "src": "1153:9:2",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_struct$_Guideline_$284_storage_ptr",
+                  "typeIdentifier": "t_struct$_Guideline_$285_storage_ptr",
                   "typeString": "struct SacredCoin.Guideline"
                 }
               },
-              "id": 288,
+              "id": 289,
               "nodeType": "ArrayTypeName",
               "src": "1153:11:2",
               "typeDescriptions": {
-                "typeIdentifier": "t_array$_t_struct$_Guideline_$284_storage_$dyn_storage_ptr",
+                "typeIdentifier": "t_array$_t_struct$_Guideline_$285_storage_$dyn_storage_ptr",
                 "typeString": "struct SacredCoin.Guideline[]"
               }
             },
@@ -4061,28 +4061,28 @@
           {
             "anonymous": false,
             "documentation": {
-              "id": 290,
+              "id": 291,
               "nodeType": "StructuredDocumentation",
               "src": "1191:262:2",
               "text": " @dev An event that records the fact that a guideline has been created.\n Because coin guidelines need to be explicitly stated during the coin creation,\n this event only gets emitted when the coin is created, one event per guideline."
             },
-            "id": 296,
+            "id": 297,
             "name": "GuidelineCreated",
             "nameLocation": "1465:16:2",
             "nodeType": "EventDefinition",
             "parameters": {
-              "id": 295,
+              "id": 296,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 292,
+                  "id": 293,
                   "indexed": false,
                   "mutability": "mutable",
                   "name": "guidelineSummary",
                   "nameLocation": "1489:16:2",
                   "nodeType": "VariableDeclaration",
-                  "scope": 296,
+                  "scope": 297,
                   "src": "1482:23:2",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -4091,7 +4091,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 291,
+                    "id": 292,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "1482:6:2",
@@ -4104,13 +4104,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 294,
+                  "id": 295,
                   "indexed": false,
                   "mutability": "mutable",
                   "name": "guideline",
                   "nameLocation": "1514:9:2",
                   "nodeType": "VariableDeclaration",
-                  "scope": 296,
+                  "scope": 297,
                   "src": "1507:16:2",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -4119,7 +4119,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 293,
+                    "id": 294,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "1507:6:2",
@@ -4137,44 +4137,44 @@
           },
           {
             "body": {
-              "id": 327,
+              "id": 328,
               "nodeType": "Block",
               "src": "1976:606:2",
               "statements": [
                 {
                   "assignments": [
-                    307
+                    308
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 307,
+                      "id": 308,
                       "mutability": "mutable",
                       "name": "guideline",
                       "nameLocation": "2126:9:2",
                       "nodeType": "VariableDeclaration",
-                      "scope": 327,
+                      "scope": 328,
                       "src": "2109:26:2",
                       "stateVariable": false,
                       "storageLocation": "memory",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_Guideline_$284_memory_ptr",
+                        "typeIdentifier": "t_struct$_Guideline_$285_memory_ptr",
                         "typeString": "struct SacredCoin.Guideline"
                       },
                       "typeName": {
-                        "id": 306,
+                        "id": 307,
                         "nodeType": "UserDefinedTypeName",
                         "pathNode": {
-                          "id": 305,
+                          "id": 306,
                           "name": "Guideline",
                           "nodeType": "IdentifierPath",
-                          "referencedDeclaration": 284,
+                          "referencedDeclaration": 285,
                           "src": "2109:9:2"
                         },
-                        "referencedDeclaration": 284,
+                        "referencedDeclaration": 285,
                         "src": "2109:9:2",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Guideline_$284_storage_ptr",
+                          "typeIdentifier": "t_struct$_Guideline_$285_storage_ptr",
                           "typeString": "struct SacredCoin.Guideline"
                         }
                       },
@@ -4182,15 +4182,15 @@
                     }
                   ],
                   "documentation": " @dev creating a new struct instance of the type Guideline and storing it in memory.",
-                  "id": 312,
+                  "id": 313,
                   "initialValue": {
                     "arguments": [
                       {
-                        "id": 309,
+                        "id": 310,
                         "name": "_guidelineSummary",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 299,
+                        "referencedDeclaration": 300,
                         "src": "2148:17:2",
                         "typeDescriptions": {
                           "typeIdentifier": "t_string_memory_ptr",
@@ -4198,11 +4198,11 @@
                         }
                       },
                       {
-                        "id": 310,
+                        "id": 311,
                         "name": "_guideline",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 301,
+                        "referencedDeclaration": 302,
                         "src": "2167:10:2",
                         "typeDescriptions": {
                           "typeIdentifier": "t_string_memory_ptr",
@@ -4221,18 +4221,18 @@
                           "typeString": "string memory"
                         }
                       ],
-                      "id": 308,
+                      "id": 309,
                       "name": "Guideline",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 284,
+                      "referencedDeclaration": 285,
                       "src": "2138:9:2",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_type$_t_struct$_Guideline_$284_storage_ptr_$",
+                        "typeIdentifier": "t_type$_t_struct$_Guideline_$285_storage_ptr_$",
                         "typeString": "type(struct SacredCoin.Guideline storage pointer)"
                       }
                     },
-                    "id": 311,
+                    "id": 312,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -4243,7 +4243,7 @@
                     "src": "2138:40:2",
                     "tryCall": false,
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_Guideline_$284_memory_ptr",
+                      "typeIdentifier": "t_struct$_Guideline_$285_memory_ptr",
                       "typeString": "struct SacredCoin.Guideline memory"
                     }
                   },
@@ -4255,14 +4255,14 @@
                   "expression": {
                     "arguments": [
                       {
-                        "id": 316,
+                        "id": 317,
                         "name": "guideline",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 307,
+                        "referencedDeclaration": 308,
                         "src": "2312:9:2",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Guideline_$284_memory_ptr",
+                          "typeIdentifier": "t_struct$_Guideline_$285_memory_ptr",
                           "typeString": "struct SacredCoin.Guideline memory"
                         }
                       }
@@ -4270,23 +4270,23 @@
                     "expression": {
                       "argumentTypes": [
                         {
-                          "typeIdentifier": "t_struct$_Guideline_$284_memory_ptr",
+                          "typeIdentifier": "t_struct$_Guideline_$285_memory_ptr",
                           "typeString": "struct SacredCoin.Guideline memory"
                         }
                       ],
                       "expression": {
-                        "id": 313,
+                        "id": 314,
                         "name": "guidelines",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 289,
+                        "referencedDeclaration": 290,
                         "src": "2296:10:2",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_array$_t_struct$_Guideline_$284_storage_$dyn_storage",
+                          "typeIdentifier": "t_array$_t_struct$_Guideline_$285_storage_$dyn_storage",
                           "typeString": "struct SacredCoin.Guideline storage ref[] storage ref"
                         }
                       },
-                      "id": 315,
+                      "id": 316,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -4295,11 +4295,11 @@
                       "nodeType": "MemberAccess",
                       "src": "2296:15:2",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_arraypush_nonpayable$_t_array$_t_struct$_Guideline_$284_storage_$dyn_storage_ptr_$_t_struct$_Guideline_$284_storage_$returns$__$bound_to$_t_array$_t_struct$_Guideline_$284_storage_$dyn_storage_ptr_$",
+                        "typeIdentifier": "t_function_arraypush_nonpayable$_t_array$_t_struct$_Guideline_$285_storage_$dyn_storage_ptr_$_t_struct$_Guideline_$285_storage_$returns$__$bound_to$_t_array$_t_struct$_Guideline_$285_storage_$dyn_storage_ptr_$",
                         "typeString": "function (struct SacredCoin.Guideline storage ref[] storage pointer,struct SacredCoin.Guideline storage ref)"
                       }
                     },
-                    "id": 317,
+                    "id": 318,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -4314,7 +4314,7 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 318,
+                  "id": 319,
                   "nodeType": "ExpressionStatement",
                   "src": "2296:26:2"
                 },
@@ -4323,11 +4323,11 @@
                   "eventCall": {
                     "arguments": [
                       {
-                        "id": 320,
+                        "id": 321,
                         "name": "_guidelineSummary",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 299,
+                        "referencedDeclaration": 300,
                         "src": "2433:17:2",
                         "typeDescriptions": {
                           "typeIdentifier": "t_string_memory_ptr",
@@ -4335,11 +4335,11 @@
                         }
                       },
                       {
-                        "id": 321,
+                        "id": 322,
                         "name": "_guideline",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 301,
+                        "referencedDeclaration": 302,
                         "src": "2452:10:2",
                         "typeDescriptions": {
                           "typeIdentifier": "t_string_memory_ptr",
@@ -4358,18 +4358,18 @@
                           "typeString": "string memory"
                         }
                       ],
-                      "id": 319,
+                      "id": 320,
                       "name": "GuidelineCreated",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 296,
+                      "referencedDeclaration": 297,
                       "src": "2416:16:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_string_memory_ptr_$_t_string_memory_ptr_$returns$__$",
                         "typeString": "function (string memory,string memory)"
                       }
                     },
-                    "id": 322,
+                    "id": 323,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -4384,14 +4384,14 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 323,
+                  "id": 324,
                   "nodeType": "EmitStatement",
                   "src": "2411:52:2"
                 },
                 {
                   "documentation": " @dev Increment numberOfGuidelines by one.",
                   "expression": {
-                    "id": 325,
+                    "id": 326,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -4401,11 +4401,11 @@
                     "prefix": false,
                     "src": "2554:20:2",
                     "subExpression": {
-                      "id": 324,
+                      "id": 325,
                       "name": "numberOfGuidelines",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 275,
+                      "referencedDeclaration": 276,
                       "src": "2554:18:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -4417,19 +4417,19 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 326,
+                  "id": 327,
                   "nodeType": "ExpressionStatement",
                   "src": "2554:20:2"
                 }
               ]
             },
             "documentation": {
-              "id": 297,
+              "id": 298,
               "nodeType": "StructuredDocumentation",
               "src": "1533:347:2",
               "text": " @dev The main function of the contract. Should be called in the constructor function of the coin\n @param _guidelineSummary A summary of the guideline. The summary can be used as a title for\n the guideline when it is retrieved and displayed on a front-end.\n @param _guideline The guideline itself."
             },
-            "id": 328,
+            "id": 329,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
@@ -4437,17 +4437,17 @@
             "nameLocation": "1895:12:2",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 302,
+              "id": 303,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 299,
+                  "id": 300,
                   "mutability": "mutable",
                   "name": "_guidelineSummary",
                   "nameLocation": "1922:17:2",
                   "nodeType": "VariableDeclaration",
-                  "scope": 328,
+                  "scope": 329,
                   "src": "1908:31:2",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -4456,7 +4456,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 298,
+                    "id": 299,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "1908:6:2",
@@ -4469,12 +4469,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 301,
+                  "id": 302,
                   "mutability": "mutable",
                   "name": "_guideline",
                   "nameLocation": "1955:10:2",
                   "nodeType": "VariableDeclaration",
-                  "scope": 328,
+                  "scope": 329,
                   "src": "1941:24:2",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -4483,7 +4483,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 300,
+                    "id": 301,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "1941:6:2",
@@ -4498,12 +4498,12 @@
               "src": "1907:59:2"
             },
             "returnParameters": {
-              "id": 303,
+              "id": 304,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1976:0:2"
             },
-            "scope": 362,
+            "scope": 363,
             "src": "1886:696:2",
             "stateMutability": "nonpayable",
             "virtual": false,
@@ -4511,7 +4511,7 @@
           },
           {
             "body": {
-              "id": 348,
+              "id": 349,
               "nodeType": "Block",
               "src": "2914:84:2",
               "statements": [
@@ -4521,24 +4521,24 @@
                       {
                         "expression": {
                           "baseExpression": {
-                            "id": 338,
+                            "id": 339,
                             "name": "guidelines",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 289,
+                            "referencedDeclaration": 290,
                             "src": "2933:10:2",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_array$_t_struct$_Guideline_$284_storage_$dyn_storage",
+                              "typeIdentifier": "t_array$_t_struct$_Guideline_$285_storage_$dyn_storage",
                               "typeString": "struct SacredCoin.Guideline storage ref[] storage ref"
                             }
                           },
-                          "id": 340,
+                          "id": 341,
                           "indexExpression": {
-                            "id": 339,
+                            "id": 340,
                             "name": "_index",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 331,
+                            "referencedDeclaration": 332,
                             "src": "2944:6:2",
                             "typeDescriptions": {
                               "typeIdentifier": "t_uint256",
@@ -4552,18 +4552,18 @@
                           "nodeType": "IndexAccess",
                           "src": "2933:18:2",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_Guideline_$284_storage",
+                            "typeIdentifier": "t_struct$_Guideline_$285_storage",
                             "typeString": "struct SacredCoin.Guideline storage ref"
                           }
                         },
-                        "id": 341,
+                        "id": 342,
                         "isConstant": false,
                         "isLValue": true,
                         "isPure": false,
                         "lValueRequested": false,
                         "memberName": "summary",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 281,
+                        "referencedDeclaration": 282,
                         "src": "2933:26:2",
                         "typeDescriptions": {
                           "typeIdentifier": "t_string_storage",
@@ -4573,24 +4573,24 @@
                       {
                         "expression": {
                           "baseExpression": {
-                            "id": 342,
+                            "id": 343,
                             "name": "guidelines",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 289,
+                            "referencedDeclaration": 290,
                             "src": "2961:10:2",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_array$_t_struct$_Guideline_$284_storage_$dyn_storage",
+                              "typeIdentifier": "t_array$_t_struct$_Guideline_$285_storage_$dyn_storage",
                               "typeString": "struct SacredCoin.Guideline storage ref[] storage ref"
                             }
                           },
-                          "id": 344,
+                          "id": 345,
                           "indexExpression": {
-                            "id": 343,
+                            "id": 344,
                             "name": "_index",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 331,
+                            "referencedDeclaration": 332,
                             "src": "2972:6:2",
                             "typeDescriptions": {
                               "typeIdentifier": "t_uint256",
@@ -4604,18 +4604,18 @@
                           "nodeType": "IndexAccess",
                           "src": "2961:18:2",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_Guideline_$284_storage",
+                            "typeIdentifier": "t_struct$_Guideline_$285_storage",
                             "typeString": "struct SacredCoin.Guideline storage ref"
                           }
                         },
-                        "id": 345,
+                        "id": 346,
                         "isConstant": false,
                         "isLValue": true,
                         "isPure": false,
                         "lValueRequested": false,
                         "memberName": "guideline",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 283,
+                        "referencedDeclaration": 284,
                         "src": "2961:28:2",
                         "typeDescriptions": {
                           "typeIdentifier": "t_string_storage",
@@ -4623,7 +4623,7 @@
                         }
                       }
                     ],
-                    "id": 346,
+                    "id": 347,
                     "isConstant": false,
                     "isInlineArray": false,
                     "isLValue": false,
@@ -4636,21 +4636,21 @@
                       "typeString": "tuple(string storage ref,string storage ref)"
                     }
                   },
-                  "functionReturnParameters": 337,
-                  "id": 347,
+                  "functionReturnParameters": 338,
+                  "id": 348,
                   "nodeType": "Return",
                   "src": "2925:65:2"
                 }
               ]
             },
             "documentation": {
-              "id": 329,
+              "id": 330,
               "nodeType": "StructuredDocumentation",
               "src": "2590:224:2",
               "text": " @dev Function that returns a single guideline.\n The element at location 0 of the array will store the guideline summary.\n The element at location 1 of the array will store the guideline itself."
             },
             "functionSelector": "8f48ec3f",
-            "id": 349,
+            "id": 350,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
@@ -4658,17 +4658,17 @@
             "nameLocation": "2829:21:2",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 332,
+              "id": 333,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 331,
+                  "id": 332,
                   "mutability": "mutable",
                   "name": "_index",
                   "nameLocation": "2856:6:2",
                   "nodeType": "VariableDeclaration",
-                  "scope": 349,
+                  "scope": 350,
                   "src": "2851:11:2",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -4677,7 +4677,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 330,
+                    "id": 331,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "2851:4:2",
@@ -4692,17 +4692,17 @@
               "src": "2850:13:2"
             },
             "returnParameters": {
-              "id": 337,
+              "id": 338,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 334,
+                  "id": 335,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 349,
+                  "scope": 350,
                   "src": "2884:13:2",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -4711,7 +4711,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 333,
+                    "id": 334,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "2884:6:2",
@@ -4724,12 +4724,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 336,
+                  "id": 337,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 349,
+                  "scope": 350,
                   "src": "2899:13:2",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -4738,7 +4738,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 335,
+                    "id": 336,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "2899:6:2",
@@ -4752,7 +4752,7 @@
               ],
               "src": "2883:30:2"
             },
-            "scope": 362,
+            "scope": 363,
             "src": "2820:178:2",
             "stateMutability": "view",
             "virtual": false,
@@ -4760,7 +4760,7 @@
           },
           {
             "body": {
-              "id": 360,
+              "id": 361,
               "nodeType": "Block",
               "src": "3238:38:2",
               "statements": [
@@ -4768,19 +4768,19 @@
                   "expression": {
                     "components": [
                       {
-                        "id": 357,
+                        "id": 358,
                         "name": "guidelines",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 289,
+                        "referencedDeclaration": 290,
                         "src": "3257:10:2",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_array$_t_struct$_Guideline_$284_storage_$dyn_storage",
+                          "typeIdentifier": "t_array$_t_struct$_Guideline_$285_storage_$dyn_storage",
                           "typeString": "struct SacredCoin.Guideline storage ref[] storage ref"
                         }
                       }
                     ],
-                    "id": 358,
+                    "id": 359,
                     "isConstant": false,
                     "isInlineArray": false,
                     "isLValue": false,
@@ -4789,25 +4789,25 @@
                     "nodeType": "TupleExpression",
                     "src": "3256:12:2",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_array$_t_struct$_Guideline_$284_storage_$dyn_storage",
+                      "typeIdentifier": "t_array$_t_struct$_Guideline_$285_storage_$dyn_storage",
                       "typeString": "struct SacredCoin.Guideline storage ref[] storage ref"
                     }
                   },
-                  "functionReturnParameters": 356,
-                  "id": 359,
+                  "functionReturnParameters": 357,
+                  "id": 360,
                   "nodeType": "Return",
                   "src": "3249:19:2"
                 }
               ]
             },
             "documentation": {
-              "id": 350,
+              "id": 351,
               "nodeType": "StructuredDocumentation",
               "src": "3006:155:2",
               "text": " @dev Function that returns all guidelines.\n This allows iterating over all guidelines for the purpose of retrieval and/or display."
             },
             "functionSelector": "f2409e67",
-            "id": 361,
+            "id": 362,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
@@ -4815,53 +4815,53 @@
             "nameLocation": "3176:19:2",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 351,
+              "id": 352,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "3195:2:2"
             },
             "returnParameters": {
-              "id": 356,
+              "id": 357,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 355,
+                  "id": 356,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 361,
+                  "scope": 362,
                   "src": "3218:18:2",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_array$_t_struct$_Guideline_$284_memory_ptr_$dyn_memory_ptr",
+                    "typeIdentifier": "t_array$_t_struct$_Guideline_$285_memory_ptr_$dyn_memory_ptr",
                     "typeString": "struct SacredCoin.Guideline[]"
                   },
                   "typeName": {
                     "baseType": {
-                      "id": 353,
+                      "id": 354,
                       "nodeType": "UserDefinedTypeName",
                       "pathNode": {
-                        "id": 352,
+                        "id": 353,
                         "name": "Guideline",
                         "nodeType": "IdentifierPath",
-                        "referencedDeclaration": 284,
+                        "referencedDeclaration": 285,
                         "src": "3218:9:2"
                       },
-                      "referencedDeclaration": 284,
+                      "referencedDeclaration": 285,
                       "src": "3218:9:2",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_Guideline_$284_storage_ptr",
+                        "typeIdentifier": "t_struct$_Guideline_$285_storage_ptr",
                         "typeString": "struct SacredCoin.Guideline"
                       }
                     },
-                    "id": 354,
+                    "id": 355,
                     "nodeType": "ArrayTypeName",
                     "src": "3218:11:2",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_array$_t_struct$_Guideline_$284_storage_$dyn_storage_ptr",
+                      "typeIdentifier": "t_array$_t_struct$_Guideline_$285_storage_$dyn_storage_ptr",
                       "typeString": "struct SacredCoin.Guideline[]"
                     }
                   },
@@ -4870,14 +4870,14 @@
               ],
               "src": "3217:20:2"
             },
-            "scope": 362,
+            "scope": 363,
             "src": "3167:109:2",
             "stateMutability": "view",
             "virtual": false,
             "visibility": "public"
           }
         ],
-        "scope": 363,
+        "scope": 364,
         "src": "663:2616:2",
         "usedErrors": []
       }
@@ -4888,15 +4888,15 @@
     "absolutePath": "project:/contracts/SacredCoin.sol",
     "exportedSymbols": {
       "SacredCoin": [
-        362
+        363
       ]
     },
-    "id": 363,
+    "id": 364,
     "license": "MIT",
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 272,
+        "id": 273,
         "literals": [
           "solidity",
           "^",
@@ -4913,15 +4913,15 @@
         "contractDependencies": [],
         "contractKind": "contract",
         "documentation": {
-          "id": 273,
+          "id": 274,
           "nodeType": "StructuredDocumentation",
           "src": "94:565:2",
           "text": " @title Sacred Coin Protocol v0.1.0\n @dev A protocol to build an ERC20 token that allows for the creation of guidelines,\n or recommendations on how to use the coin that are intended for the those who interact with it.\n Works in conjunction with an ERC20 implementation, such as the OpenZeppelin ERC20 contract.\n To understand the philosophy behind it, visit:\n https://sacredcoinprotocol.com\n To see examples on how to use this contract go to the GitHub page:\n https://github.com/tokenosopher/sacred-coin-protocol"
         },
         "fullyImplemented": true,
-        "id": 362,
+        "id": 363,
         "linearizedBaseContracts": [
-          362
+          363
         ],
         "name": "SacredCoin",
         "nameLocation": "672:10:2",
@@ -4930,12 +4930,12 @@
           {
             "constant": false,
             "functionSelector": "9ede4fc0",
-            "id": 275,
+            "id": 276,
             "mutability": "mutable",
             "name": "numberOfGuidelines",
             "nameLocation": "704:18:2",
             "nodeType": "VariableDeclaration",
-            "scope": 362,
+            "scope": 363,
             "src": "692:30:2",
             "stateVariable": true,
             "storageLocation": "default",
@@ -4944,7 +4944,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 274,
+              "id": 275,
               "name": "uint",
               "nodeType": "ElementaryTypeName",
               "src": "692:4:2",
@@ -4958,17 +4958,17 @@
           {
             "constant": false,
             "documentation": {
-              "id": 276,
+              "id": 277,
               "nodeType": "StructuredDocumentation",
               "src": "731:86:2",
               "text": " @dev A string that holds all of the guidelines, for easy retrieval."
             },
-            "id": 279,
+            "id": 280,
             "mutability": "mutable",
             "name": "mergedGuidelines",
             "nameLocation": "841:16:2",
             "nodeType": "VariableDeclaration",
-            "scope": 362,
+            "scope": 363,
             "src": "823:34:2",
             "stateVariable": true,
             "storageLocation": "default",
@@ -4978,7 +4978,7 @@
             },
             "typeName": {
               "baseType": {
-                "id": 277,
+                "id": 278,
                 "name": "string",
                 "nodeType": "ElementaryTypeName",
                 "src": "823:6:2",
@@ -4987,7 +4987,7 @@
                   "typeString": "string"
                 }
               },
-              "id": 278,
+              "id": 279,
               "nodeType": "ArrayTypeName",
               "src": "823:9:2",
               "typeDescriptions": {
@@ -4999,16 +4999,16 @@
           },
           {
             "canonicalName": "SacredCoin.Guideline",
-            "id": 284,
+            "id": 285,
             "members": [
               {
                 "constant": false,
-                "id": 281,
+                "id": 282,
                 "mutability": "mutable",
                 "name": "summary",
                 "nameLocation": "989:7:2",
                 "nodeType": "VariableDeclaration",
-                "scope": 284,
+                "scope": 285,
                 "src": "982:14:2",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -5017,7 +5017,7 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 280,
+                  "id": 281,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
                   "src": "982:6:2",
@@ -5030,12 +5030,12 @@
               },
               {
                 "constant": false,
-                "id": 283,
+                "id": 284,
                 "mutability": "mutable",
                 "name": "guideline",
                 "nameLocation": "1014:9:2",
                 "nodeType": "VariableDeclaration",
-                "scope": 284,
+                "scope": 285,
                 "src": "1007:16:2",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -5044,7 +5044,7 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 282,
+                  "id": 283,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
                   "src": "1007:6:2",
@@ -5059,55 +5059,55 @@
             "name": "Guideline",
             "nameLocation": "961:9:2",
             "nodeType": "StructDefinition",
-            "scope": 362,
+            "scope": 363,
             "src": "954:77:2",
             "visibility": "public"
           },
           {
             "constant": false,
             "documentation": {
-              "id": 285,
+              "id": 286,
               "nodeType": "StructuredDocumentation",
               "src": "1039:108:2",
               "text": " @dev An array of Guideline structs that stores all of the guidelines, for easy retrieval."
             },
             "functionSelector": "e2bff3ba",
-            "id": 289,
+            "id": 290,
             "mutability": "mutable",
             "name": "guidelines",
             "nameLocation": "1172:10:2",
             "nodeType": "VariableDeclaration",
-            "scope": 362,
+            "scope": 363,
             "src": "1153:29:2",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_array$_t_struct$_Guideline_$284_storage_$dyn_storage",
+              "typeIdentifier": "t_array$_t_struct$_Guideline_$285_storage_$dyn_storage",
               "typeString": "struct SacredCoin.Guideline[]"
             },
             "typeName": {
               "baseType": {
-                "id": 287,
+                "id": 288,
                 "nodeType": "UserDefinedTypeName",
                 "pathNode": {
-                  "id": 286,
+                  "id": 287,
                   "name": "Guideline",
                   "nodeType": "IdentifierPath",
-                  "referencedDeclaration": 284,
+                  "referencedDeclaration": 285,
                   "src": "1153:9:2"
                 },
-                "referencedDeclaration": 284,
+                "referencedDeclaration": 285,
                 "src": "1153:9:2",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_struct$_Guideline_$284_storage_ptr",
+                  "typeIdentifier": "t_struct$_Guideline_$285_storage_ptr",
                   "typeString": "struct SacredCoin.Guideline"
                 }
               },
-              "id": 288,
+              "id": 289,
               "nodeType": "ArrayTypeName",
               "src": "1153:11:2",
               "typeDescriptions": {
-                "typeIdentifier": "t_array$_t_struct$_Guideline_$284_storage_$dyn_storage_ptr",
+                "typeIdentifier": "t_array$_t_struct$_Guideline_$285_storage_$dyn_storage_ptr",
                 "typeString": "struct SacredCoin.Guideline[]"
               }
             },
@@ -5116,28 +5116,28 @@
           {
             "anonymous": false,
             "documentation": {
-              "id": 290,
+              "id": 291,
               "nodeType": "StructuredDocumentation",
               "src": "1191:262:2",
               "text": " @dev An event that records the fact that a guideline has been created.\n Because coin guidelines need to be explicitly stated during the coin creation,\n this event only gets emitted when the coin is created, one event per guideline."
             },
-            "id": 296,
+            "id": 297,
             "name": "GuidelineCreated",
             "nameLocation": "1465:16:2",
             "nodeType": "EventDefinition",
             "parameters": {
-              "id": 295,
+              "id": 296,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 292,
+                  "id": 293,
                   "indexed": false,
                   "mutability": "mutable",
                   "name": "guidelineSummary",
                   "nameLocation": "1489:16:2",
                   "nodeType": "VariableDeclaration",
-                  "scope": 296,
+                  "scope": 297,
                   "src": "1482:23:2",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -5146,7 +5146,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 291,
+                    "id": 292,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "1482:6:2",
@@ -5159,13 +5159,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 294,
+                  "id": 295,
                   "indexed": false,
                   "mutability": "mutable",
                   "name": "guideline",
                   "nameLocation": "1514:9:2",
                   "nodeType": "VariableDeclaration",
-                  "scope": 296,
+                  "scope": 297,
                   "src": "1507:16:2",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -5174,7 +5174,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 293,
+                    "id": 294,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "1507:6:2",
@@ -5192,44 +5192,44 @@
           },
           {
             "body": {
-              "id": 327,
+              "id": 328,
               "nodeType": "Block",
               "src": "1976:606:2",
               "statements": [
                 {
                   "assignments": [
-                    307
+                    308
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 307,
+                      "id": 308,
                       "mutability": "mutable",
                       "name": "guideline",
                       "nameLocation": "2126:9:2",
                       "nodeType": "VariableDeclaration",
-                      "scope": 327,
+                      "scope": 328,
                       "src": "2109:26:2",
                       "stateVariable": false,
                       "storageLocation": "memory",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_Guideline_$284_memory_ptr",
+                        "typeIdentifier": "t_struct$_Guideline_$285_memory_ptr",
                         "typeString": "struct SacredCoin.Guideline"
                       },
                       "typeName": {
-                        "id": 306,
+                        "id": 307,
                         "nodeType": "UserDefinedTypeName",
                         "pathNode": {
-                          "id": 305,
+                          "id": 306,
                           "name": "Guideline",
                           "nodeType": "IdentifierPath",
-                          "referencedDeclaration": 284,
+                          "referencedDeclaration": 285,
                           "src": "2109:9:2"
                         },
-                        "referencedDeclaration": 284,
+                        "referencedDeclaration": 285,
                         "src": "2109:9:2",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Guideline_$284_storage_ptr",
+                          "typeIdentifier": "t_struct$_Guideline_$285_storage_ptr",
                           "typeString": "struct SacredCoin.Guideline"
                         }
                       },
@@ -5237,15 +5237,15 @@
                     }
                   ],
                   "documentation": " @dev creating a new struct instance of the type Guideline and storing it in memory.",
-                  "id": 312,
+                  "id": 313,
                   "initialValue": {
                     "arguments": [
                       {
-                        "id": 309,
+                        "id": 310,
                         "name": "_guidelineSummary",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 299,
+                        "referencedDeclaration": 300,
                         "src": "2148:17:2",
                         "typeDescriptions": {
                           "typeIdentifier": "t_string_memory_ptr",
@@ -5253,11 +5253,11 @@
                         }
                       },
                       {
-                        "id": 310,
+                        "id": 311,
                         "name": "_guideline",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 301,
+                        "referencedDeclaration": 302,
                         "src": "2167:10:2",
                         "typeDescriptions": {
                           "typeIdentifier": "t_string_memory_ptr",
@@ -5276,18 +5276,18 @@
                           "typeString": "string memory"
                         }
                       ],
-                      "id": 308,
+                      "id": 309,
                       "name": "Guideline",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 284,
+                      "referencedDeclaration": 285,
                       "src": "2138:9:2",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_type$_t_struct$_Guideline_$284_storage_ptr_$",
+                        "typeIdentifier": "t_type$_t_struct$_Guideline_$285_storage_ptr_$",
                         "typeString": "type(struct SacredCoin.Guideline storage pointer)"
                       }
                     },
-                    "id": 311,
+                    "id": 312,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -5298,7 +5298,7 @@
                     "src": "2138:40:2",
                     "tryCall": false,
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_Guideline_$284_memory_ptr",
+                      "typeIdentifier": "t_struct$_Guideline_$285_memory_ptr",
                       "typeString": "struct SacredCoin.Guideline memory"
                     }
                   },
@@ -5310,14 +5310,14 @@
                   "expression": {
                     "arguments": [
                       {
-                        "id": 316,
+                        "id": 317,
                         "name": "guideline",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 307,
+                        "referencedDeclaration": 308,
                         "src": "2312:9:2",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Guideline_$284_memory_ptr",
+                          "typeIdentifier": "t_struct$_Guideline_$285_memory_ptr",
                           "typeString": "struct SacredCoin.Guideline memory"
                         }
                       }
@@ -5325,23 +5325,23 @@
                     "expression": {
                       "argumentTypes": [
                         {
-                          "typeIdentifier": "t_struct$_Guideline_$284_memory_ptr",
+                          "typeIdentifier": "t_struct$_Guideline_$285_memory_ptr",
                           "typeString": "struct SacredCoin.Guideline memory"
                         }
                       ],
                       "expression": {
-                        "id": 313,
+                        "id": 314,
                         "name": "guidelines",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 289,
+                        "referencedDeclaration": 290,
                         "src": "2296:10:2",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_array$_t_struct$_Guideline_$284_storage_$dyn_storage",
+                          "typeIdentifier": "t_array$_t_struct$_Guideline_$285_storage_$dyn_storage",
                           "typeString": "struct SacredCoin.Guideline storage ref[] storage ref"
                         }
                       },
-                      "id": 315,
+                      "id": 316,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -5350,11 +5350,11 @@
                       "nodeType": "MemberAccess",
                       "src": "2296:15:2",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_arraypush_nonpayable$_t_array$_t_struct$_Guideline_$284_storage_$dyn_storage_ptr_$_t_struct$_Guideline_$284_storage_$returns$__$bound_to$_t_array$_t_struct$_Guideline_$284_storage_$dyn_storage_ptr_$",
+                        "typeIdentifier": "t_function_arraypush_nonpayable$_t_array$_t_struct$_Guideline_$285_storage_$dyn_storage_ptr_$_t_struct$_Guideline_$285_storage_$returns$__$bound_to$_t_array$_t_struct$_Guideline_$285_storage_$dyn_storage_ptr_$",
                         "typeString": "function (struct SacredCoin.Guideline storage ref[] storage pointer,struct SacredCoin.Guideline storage ref)"
                       }
                     },
-                    "id": 317,
+                    "id": 318,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -5369,7 +5369,7 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 318,
+                  "id": 319,
                   "nodeType": "ExpressionStatement",
                   "src": "2296:26:2"
                 },
@@ -5378,11 +5378,11 @@
                   "eventCall": {
                     "arguments": [
                       {
-                        "id": 320,
+                        "id": 321,
                         "name": "_guidelineSummary",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 299,
+                        "referencedDeclaration": 300,
                         "src": "2433:17:2",
                         "typeDescriptions": {
                           "typeIdentifier": "t_string_memory_ptr",
@@ -5390,11 +5390,11 @@
                         }
                       },
                       {
-                        "id": 321,
+                        "id": 322,
                         "name": "_guideline",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 301,
+                        "referencedDeclaration": 302,
                         "src": "2452:10:2",
                         "typeDescriptions": {
                           "typeIdentifier": "t_string_memory_ptr",
@@ -5413,18 +5413,18 @@
                           "typeString": "string memory"
                         }
                       ],
-                      "id": 319,
+                      "id": 320,
                       "name": "GuidelineCreated",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 296,
+                      "referencedDeclaration": 297,
                       "src": "2416:16:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_string_memory_ptr_$_t_string_memory_ptr_$returns$__$",
                         "typeString": "function (string memory,string memory)"
                       }
                     },
-                    "id": 322,
+                    "id": 323,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -5439,14 +5439,14 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 323,
+                  "id": 324,
                   "nodeType": "EmitStatement",
                   "src": "2411:52:2"
                 },
                 {
                   "documentation": " @dev Increment numberOfGuidelines by one.",
                   "expression": {
-                    "id": 325,
+                    "id": 326,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -5456,11 +5456,11 @@
                     "prefix": false,
                     "src": "2554:20:2",
                     "subExpression": {
-                      "id": 324,
+                      "id": 325,
                       "name": "numberOfGuidelines",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 275,
+                      "referencedDeclaration": 276,
                       "src": "2554:18:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -5472,19 +5472,19 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 326,
+                  "id": 327,
                   "nodeType": "ExpressionStatement",
                   "src": "2554:20:2"
                 }
               ]
             },
             "documentation": {
-              "id": 297,
+              "id": 298,
               "nodeType": "StructuredDocumentation",
               "src": "1533:347:2",
               "text": " @dev The main function of the contract. Should be called in the constructor function of the coin\n @param _guidelineSummary A summary of the guideline. The summary can be used as a title for\n the guideline when it is retrieved and displayed on a front-end.\n @param _guideline The guideline itself."
             },
-            "id": 328,
+            "id": 329,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
@@ -5492,17 +5492,17 @@
             "nameLocation": "1895:12:2",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 302,
+              "id": 303,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 299,
+                  "id": 300,
                   "mutability": "mutable",
                   "name": "_guidelineSummary",
                   "nameLocation": "1922:17:2",
                   "nodeType": "VariableDeclaration",
-                  "scope": 328,
+                  "scope": 329,
                   "src": "1908:31:2",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -5511,7 +5511,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 298,
+                    "id": 299,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "1908:6:2",
@@ -5524,12 +5524,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 301,
+                  "id": 302,
                   "mutability": "mutable",
                   "name": "_guideline",
                   "nameLocation": "1955:10:2",
                   "nodeType": "VariableDeclaration",
-                  "scope": 328,
+                  "scope": 329,
                   "src": "1941:24:2",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -5538,7 +5538,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 300,
+                    "id": 301,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "1941:6:2",
@@ -5553,12 +5553,12 @@
               "src": "1907:59:2"
             },
             "returnParameters": {
-              "id": 303,
+              "id": 304,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1976:0:2"
             },
-            "scope": 362,
+            "scope": 363,
             "src": "1886:696:2",
             "stateMutability": "nonpayable",
             "virtual": false,
@@ -5566,7 +5566,7 @@
           },
           {
             "body": {
-              "id": 348,
+              "id": 349,
               "nodeType": "Block",
               "src": "2914:84:2",
               "statements": [
@@ -5576,24 +5576,24 @@
                       {
                         "expression": {
                           "baseExpression": {
-                            "id": 338,
+                            "id": 339,
                             "name": "guidelines",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 289,
+                            "referencedDeclaration": 290,
                             "src": "2933:10:2",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_array$_t_struct$_Guideline_$284_storage_$dyn_storage",
+                              "typeIdentifier": "t_array$_t_struct$_Guideline_$285_storage_$dyn_storage",
                               "typeString": "struct SacredCoin.Guideline storage ref[] storage ref"
                             }
                           },
-                          "id": 340,
+                          "id": 341,
                           "indexExpression": {
-                            "id": 339,
+                            "id": 340,
                             "name": "_index",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 331,
+                            "referencedDeclaration": 332,
                             "src": "2944:6:2",
                             "typeDescriptions": {
                               "typeIdentifier": "t_uint256",
@@ -5607,18 +5607,18 @@
                           "nodeType": "IndexAccess",
                           "src": "2933:18:2",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_Guideline_$284_storage",
+                            "typeIdentifier": "t_struct$_Guideline_$285_storage",
                             "typeString": "struct SacredCoin.Guideline storage ref"
                           }
                         },
-                        "id": 341,
+                        "id": 342,
                         "isConstant": false,
                         "isLValue": true,
                         "isPure": false,
                         "lValueRequested": false,
                         "memberName": "summary",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 281,
+                        "referencedDeclaration": 282,
                         "src": "2933:26:2",
                         "typeDescriptions": {
                           "typeIdentifier": "t_string_storage",
@@ -5628,24 +5628,24 @@
                       {
                         "expression": {
                           "baseExpression": {
-                            "id": 342,
+                            "id": 343,
                             "name": "guidelines",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 289,
+                            "referencedDeclaration": 290,
                             "src": "2961:10:2",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_array$_t_struct$_Guideline_$284_storage_$dyn_storage",
+                              "typeIdentifier": "t_array$_t_struct$_Guideline_$285_storage_$dyn_storage",
                               "typeString": "struct SacredCoin.Guideline storage ref[] storage ref"
                             }
                           },
-                          "id": 344,
+                          "id": 345,
                           "indexExpression": {
-                            "id": 343,
+                            "id": 344,
                             "name": "_index",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 331,
+                            "referencedDeclaration": 332,
                             "src": "2972:6:2",
                             "typeDescriptions": {
                               "typeIdentifier": "t_uint256",
@@ -5659,18 +5659,18 @@
                           "nodeType": "IndexAccess",
                           "src": "2961:18:2",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_Guideline_$284_storage",
+                            "typeIdentifier": "t_struct$_Guideline_$285_storage",
                             "typeString": "struct SacredCoin.Guideline storage ref"
                           }
                         },
-                        "id": 345,
+                        "id": 346,
                         "isConstant": false,
                         "isLValue": true,
                         "isPure": false,
                         "lValueRequested": false,
                         "memberName": "guideline",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 283,
+                        "referencedDeclaration": 284,
                         "src": "2961:28:2",
                         "typeDescriptions": {
                           "typeIdentifier": "t_string_storage",
@@ -5678,7 +5678,7 @@
                         }
                       }
                     ],
-                    "id": 346,
+                    "id": 347,
                     "isConstant": false,
                     "isInlineArray": false,
                     "isLValue": false,
@@ -5691,21 +5691,21 @@
                       "typeString": "tuple(string storage ref,string storage ref)"
                     }
                   },
-                  "functionReturnParameters": 337,
-                  "id": 347,
+                  "functionReturnParameters": 338,
+                  "id": 348,
                   "nodeType": "Return",
                   "src": "2925:65:2"
                 }
               ]
             },
             "documentation": {
-              "id": 329,
+              "id": 330,
               "nodeType": "StructuredDocumentation",
               "src": "2590:224:2",
               "text": " @dev Function that returns a single guideline.\n The element at location 0 of the array will store the guideline summary.\n The element at location 1 of the array will store the guideline itself."
             },
             "functionSelector": "8f48ec3f",
-            "id": 349,
+            "id": 350,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
@@ -5713,17 +5713,17 @@
             "nameLocation": "2829:21:2",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 332,
+              "id": 333,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 331,
+                  "id": 332,
                   "mutability": "mutable",
                   "name": "_index",
                   "nameLocation": "2856:6:2",
                   "nodeType": "VariableDeclaration",
-                  "scope": 349,
+                  "scope": 350,
                   "src": "2851:11:2",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -5732,7 +5732,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 330,
+                    "id": 331,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "2851:4:2",
@@ -5747,17 +5747,17 @@
               "src": "2850:13:2"
             },
             "returnParameters": {
-              "id": 337,
+              "id": 338,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 334,
+                  "id": 335,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 349,
+                  "scope": 350,
                   "src": "2884:13:2",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -5766,7 +5766,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 333,
+                    "id": 334,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "2884:6:2",
@@ -5779,12 +5779,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 336,
+                  "id": 337,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 349,
+                  "scope": 350,
                   "src": "2899:13:2",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -5793,7 +5793,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 335,
+                    "id": 336,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "2899:6:2",
@@ -5807,7 +5807,7 @@
               ],
               "src": "2883:30:2"
             },
-            "scope": 362,
+            "scope": 363,
             "src": "2820:178:2",
             "stateMutability": "view",
             "virtual": false,
@@ -5815,7 +5815,7 @@
           },
           {
             "body": {
-              "id": 360,
+              "id": 361,
               "nodeType": "Block",
               "src": "3238:38:2",
               "statements": [
@@ -5823,19 +5823,19 @@
                   "expression": {
                     "components": [
                       {
-                        "id": 357,
+                        "id": 358,
                         "name": "guidelines",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 289,
+                        "referencedDeclaration": 290,
                         "src": "3257:10:2",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_array$_t_struct$_Guideline_$284_storage_$dyn_storage",
+                          "typeIdentifier": "t_array$_t_struct$_Guideline_$285_storage_$dyn_storage",
                           "typeString": "struct SacredCoin.Guideline storage ref[] storage ref"
                         }
                       }
                     ],
-                    "id": 358,
+                    "id": 359,
                     "isConstant": false,
                     "isInlineArray": false,
                     "isLValue": false,
@@ -5844,25 +5844,25 @@
                     "nodeType": "TupleExpression",
                     "src": "3256:12:2",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_array$_t_struct$_Guideline_$284_storage_$dyn_storage",
+                      "typeIdentifier": "t_array$_t_struct$_Guideline_$285_storage_$dyn_storage",
                       "typeString": "struct SacredCoin.Guideline storage ref[] storage ref"
                     }
                   },
-                  "functionReturnParameters": 356,
-                  "id": 359,
+                  "functionReturnParameters": 357,
+                  "id": 360,
                   "nodeType": "Return",
                   "src": "3249:19:2"
                 }
               ]
             },
             "documentation": {
-              "id": 350,
+              "id": 351,
               "nodeType": "StructuredDocumentation",
               "src": "3006:155:2",
               "text": " @dev Function that returns all guidelines.\n This allows iterating over all guidelines for the purpose of retrieval and/or display."
             },
             "functionSelector": "f2409e67",
-            "id": 361,
+            "id": 362,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
@@ -5870,53 +5870,53 @@
             "nameLocation": "3176:19:2",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 351,
+              "id": 352,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "3195:2:2"
             },
             "returnParameters": {
-              "id": 356,
+              "id": 357,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 355,
+                  "id": 356,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 361,
+                  "scope": 362,
                   "src": "3218:18:2",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_array$_t_struct$_Guideline_$284_memory_ptr_$dyn_memory_ptr",
+                    "typeIdentifier": "t_array$_t_struct$_Guideline_$285_memory_ptr_$dyn_memory_ptr",
                     "typeString": "struct SacredCoin.Guideline[]"
                   },
                   "typeName": {
                     "baseType": {
-                      "id": 353,
+                      "id": 354,
                       "nodeType": "UserDefinedTypeName",
                       "pathNode": {
-                        "id": 352,
+                        "id": 353,
                         "name": "Guideline",
                         "nodeType": "IdentifierPath",
-                        "referencedDeclaration": 284,
+                        "referencedDeclaration": 285,
                         "src": "3218:9:2"
                       },
-                      "referencedDeclaration": 284,
+                      "referencedDeclaration": 285,
                       "src": "3218:9:2",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_Guideline_$284_storage_ptr",
+                        "typeIdentifier": "t_struct$_Guideline_$285_storage_ptr",
                         "typeString": "struct SacredCoin.Guideline"
                       }
                     },
-                    "id": 354,
+                    "id": 355,
                     "nodeType": "ArrayTypeName",
                     "src": "3218:11:2",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_array$_t_struct$_Guideline_$284_storage_$dyn_storage_ptr",
+                      "typeIdentifier": "t_array$_t_struct$_Guideline_$285_storage_$dyn_storage_ptr",
                       "typeString": "struct SacredCoin.Guideline[]"
                     }
                   },
@@ -5925,14 +5925,14 @@
               ],
               "src": "3217:20:2"
             },
-            "scope": 362,
+            "scope": 363,
             "src": "3167:109:2",
             "stateMutability": "view",
             "virtual": false,
             "visibility": "public"
           }
         ],
-        "scope": 363,
+        "scope": 364,
         "src": "663:2616:2",
         "usedErrors": []
       }
@@ -5945,7 +5945,7 @@
   },
   "networks": {},
   "schemaVersion": "3.4.3",
-  "updatedAt": "2022-02-03T16:17:10.121Z",
+  "updatedAt": "2022-02-04T12:04:20.850Z",
   "devdoc": {
     "details": "A protocol to build an ERC20 token that allows for the creation of guidelines, or recommendations on how to use the coin that are intended for the those who interact with it. Works in conjunction with an ERC20 implementation, such as the OpenZeppelin ERC20 contract. To understand the philosophy behind it, visit: https://sacredcoinprotocol.com To see examples on how to use this contract go to the GitHub page: https://github.com/tokenosopher/sacred-coin-protocol",
     "events": {
