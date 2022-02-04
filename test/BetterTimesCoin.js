@@ -35,35 +35,28 @@ contract("BetterTimesToken", ([owner, tokenUser, stranger]) => {
         assert(result===false)
     })
 
-    it("neither owner or tokenUser or stranger should be able to call sacred message one and two", async () => {
-        try {
-            await betterTimesToken.SacredMessageOne("working on the better times coin", {from: sender})
-        } catch (e) {
-            assert(e.message.includes("only whitelisted addresses can call this function"))
-            return
-        }
-        assert(false)
+    it("owner, tokenUser and stranger SHOULD NOT be able to call SacredMessageOne, since they're not on the whitelist",
+        async () => {
 
-        // async function writeSacredMessage(sender, assert) {
-        //     try {
-        //         await betterTimesToken.SacredMessageOne("working on the better times coin", {from: sender})
-        //     } catch (e) {
-        //         assert(e.message.includes("only whitelisted addresses can call this function"))
-        //     }
-        //     try {
-        //         await betterTimesToken.SacredMessageTwo("Narcis", "don't have one", {from: sender})
-        //     } catch (e) {
-        //         assert(e.message.includes("only whitelisted addresses can call this function"))
-        //         return
-        //     }
-        //     assert(false)
-        // }
-        //
-        // //writing a sacred message using each of the accounts and checking that an error is thrown
-        // writeSacredMessage(tokenUser, assert)
-        // writeSacredMessage(owner, assert)
-        // writeSacredMessage(stranger,assert)
-    })
+            let allUsers = {'owner': owner, 'tokenUser': tokenUser, 'stranger': stranger}
+
+            for (user in allUsers) {
+                try {
+                    await betterTimesToken.SacredMessageOne("working on the better times coin", {from: allUsers[user]})
+                } catch (e) {
+                    assert(e.message.includes("only whitelisted addresses can call this function"), "not the right error " +
+                        "message for SacredMessageOne")
+                    try {
+                        await betterTimesToken.SacredMessageTwo("Narcis", "don't have one", {from: allUsers[user]})
+                    } catch (e) {
+                        assert(e.message.includes("only whitelisted addresses can call this function"), "not the right error " +
+                            "message for SacredmessageTwo")
+                        continue
+                    }
+                }
+                assert(false, `went through just fine for ${user}`)
+            }
+        })
 
     it("should display the amount of coins that are in existence", async () => {
         let totalSupply = await betterTimesToken.totalSupply();
@@ -71,5 +64,4 @@ contract("BetterTimesToken", ([owner, tokenUser, stranger]) => {
         totalSupply = tokensFromWei(totalSupply)
         assert(totalSupply.toString() === "679000000")
     })
-
 })
