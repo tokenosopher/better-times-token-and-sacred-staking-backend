@@ -84,7 +84,7 @@ contract BetterTimesToken is ERC20, Ownable, SacredCoin, SacredStakeable {
     */
     function stake(uint256 _amount) public {
         // Make sure staker actually is good for it
-        require(_amount < balanceOf(msg.sender), "DevToken: Cannot stake more than you own");
+        require(_amount < balanceOf(msg.sender), "BetterTimesToken: Cannot stake more than you own");
 
         _stake(_amount);
         // Burn the amount of tokens on the sender
