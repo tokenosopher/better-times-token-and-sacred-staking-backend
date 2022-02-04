@@ -3,3 +3,7 @@
 /.secret
 /.secret_main_account
 /.env
+/.idea/.gitignore
+/.idea/misc.xml
+/.idea/modules.xml
+/.idea/vcs.xml
