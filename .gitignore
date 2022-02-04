@@ -2,3 +2,4 @@
 /node_modules/
 /.secret
 /.secret_main_account
+/.env

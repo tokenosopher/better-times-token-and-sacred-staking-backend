@@ -29,10 +29,15 @@ contract BetterTimesToken is ERC20, Ownable, SacredCoin {
 
     event SacredEvent(string BetterTimesMessage);
 
+    /**
+    * @dev Whitelist that has the ability to emit events.
+    */
     modifier onlyWhitelistedToCallSacredMessages() {
         require( isInSacredMessagesWhitelist(msg.sender), "only whitelisted addresses can call this function");
         _;
     }
+
+
 
     function isInSacredMessagesWhitelist(address _address) public view returns (bool) {
         return WhitelistedToCallSacredMessages[_address];
