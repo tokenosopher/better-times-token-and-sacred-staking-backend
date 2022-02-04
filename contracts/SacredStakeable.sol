@@ -25,7 +25,7 @@ contract SacredStakeable {
         address user;
         uint256 amount;
         uint256 since;
-        // This claimable field is new and used to tell how big of a reward is currently available
+        // This claimable field is used to tell how big of a reward is currently available
         uint256 claimable;
     }
     /**
@@ -108,7 +108,7 @@ contract SacredStakeable {
         // Use the index to push a new Stake
         // push a newly created Stake with the current block timestamp.
         stakeholders[index].address_stakes.push(Stake(msg.sender, _amount, timestamp,0));
-        // Emit an event that the stake has occured
+        // Emit an event that the stake has occurred
         emit Staked(msg.sender, _amount, index,timestamp);
     }
 
@@ -121,8 +121,8 @@ contract SacredStakeable {
         // First calculate how long the stake has been active
         // Use current seconds since epoch - the seconds since epoch the stake was made
         // The output will be duration in SECONDS ,
-        // We will reward the user 0.1% per Hour So thats 0.1% per 3600 seconds
-        // the alghoritm is  seconds = block.timestamp - stake seconds (block.timestap - _stake.since)
+        // We will reward the user 0.1% per Hour So that's 0.1% per 3600 seconds
+        // the algorithm is  seconds = block.timestamp - stake seconds (block.timestamp - _stake.since)
         // hours = Seconds / 3600 (seconds /3600) 3600 is an variable in Solidity names hours
         // we then multiply each token by the hours staked , then divide by the rewardPerHour rate
         return (((block.timestamp - _current_stake.since) / 1 hours) * _current_stake.amount) / rewardPerHour;
@@ -132,7 +132,7 @@ contract SacredStakeable {
      * @notice
      * withdrawStake takes in an amount and a index of the stake and will remove tokens from that stake
      * Notice index of the stake is the users stake counter, starting at 0 for the first stake
-     * Will return the amount to MINT onto the acount
+     * Will return the amount to MINT onto the account
      * Will also calculateStakeReward and reset timer
     */
     function _withdrawStake(uint256 amount, uint256 index) internal returns(uint256){
@@ -160,7 +160,7 @@ contract SacredStakeable {
 
     /**
     * @notice
-     * hasStake is used to check if a account has stakes and the total amount along with all the seperate stakes
+     * hasStake is used to check if a account has stakes and the total amount along with all the separate stakes
      */
     function hasStake(address _staker) public view returns(StakingSummary memory){
         // totalStakeAmount is used to count total staked amount of the address

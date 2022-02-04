@@ -2,9 +2,22 @@
 const BetterTimesToken = artifacts.require("BetterTimesToken");
 const truffleAssert = require('truffle-assertions');
 const helper = require("./helpers/truffleTestHelpers");
+
+
+//placeholder strings for the SacredEvents:
+const myName = "Narcis"
+const myStory = "I "
+const myDeed = "by working on the sacred coin"
+
 contract("BetterTimesToken", async accounts => {
+
+    let betterTimesToken;
+
+    before(async () => {
+        betterTimesToken = await BetterTimesToken.deployed()
+    })
+
     it("Staking 100x2", async () => {
-        let betterTimesToken = await BetterTimesToken.deployed();
 
         // Stake 100 is used to stake 100 tokens twice and see that stake is added correctly and money burned
         let owner = accounts[0];
@@ -17,7 +30,8 @@ contract("BetterTimesToken", async accounts => {
 
         // Stake the amount, notice the FROM parameter which specifes what the msg.sender address will be
 
-        let stakeID = await betterTimesToken.stake(stake_amount, {from: owner});
+
+        let stakeID = await betterTimesToken.stakeOne(stake_amount, myDeed, {from: owner});
         // Assert on the emittedevent using truffleassert
         // This will capture the event and inside the event callback we can use assert on the values returned
         truffleAssert.eventEmitted(
@@ -31,8 +45,9 @@ contract("BetterTimesToken", async accounts => {
             },
             "Stake event should have triggered");
 
+
         // Stake again on owner because we want hasStake test to assert summary
-        stakeID = await betterTimesToken.stake(stake_amount, {from: owner});
+        stakeID = await betterTimesToken.stakeTwo(stake_amount, myName, myStory, {from: owner});
         // Assert on the emittedevent using truffleassert
         // This will capture the event and inside the event callback we can use assert on the values returned
         truffleAssert.eventEmitted(
@@ -50,9 +65,8 @@ contract("BetterTimesToken", async accounts => {
     });
 
     it("new stakeholder should have increased index", async () => {
-        let betterTimesToken = await BetterTimesToken.deployed();
         let stake_amount = 100;
-        let stakeID = await betterTimesToken.stake(stake_amount, {from: accounts[1]});
+        let stakeID = await betterTimesToken.stakeOne(stake_amount, myDeed,{from: accounts[1]});
         // Assert on the emittedevent using truffleassert
         // This will capture the event and inside the event callback we can use assert on the values returned
         truffleAssert.eventEmitted(
@@ -68,19 +82,14 @@ contract("BetterTimesToken", async accounts => {
     })
 
     it("cannot stake more than owning", async () => {
-
-        // Stake too much on accounts[2]
-        betterTimesToken = await BetterTimesToken.deployed();
-
         try {
-            await betterTimesToken.stake(1000000000, { from: accounts[2] });
+            await betterTimesToken.stakeTwo(1000000000, myName, myStory, { from: accounts[2] });
         } catch (error) {
             assert.equal(error.reason, "BetterTimesToken: Cannot stake more than you own");
         }
     });
 
     it("cant withdraw bigger amount than current stake", async() => {
-        betterTimesToken = await BetterTimesToken.deployed();
 
         let owner = accounts[0];
 
@@ -93,7 +102,6 @@ contract("BetterTimesToken", async accounts => {
     });
 
     it("withdraw 50 from a stake", async() => {
-        betterTimesToken = await BetterTimesToken.deployed();
 
         let owner = accounts[0];
         let withdraw_amount = 50;
@@ -110,7 +118,6 @@ contract("BetterTimesToken", async accounts => {
     });
 
     it("remove stake if empty", async() => {
-        betterTimesToken = await BetterTimesToken.deployed();
 
         let owner = accounts[0];
         let withdraw_amount = 50;
@@ -123,7 +130,6 @@ contract("BetterTimesToken", async accounts => {
     });
 
     it("calculate rewards", async() => {
-        betterTimesToken = await BetterTimesToken.deployed();
 
         let owner = accounts[0];
 
@@ -137,7 +143,7 @@ contract("BetterTimesToken", async accounts => {
         assert.equal(stake.claimable, 100*0.02, "Reward should be 2 after staking for twenty hours with 100")
         // Make a new Stake for 1000, fast forward 20 hours again, and make sure total stake reward is 24 (20+4)
         // Remember that the first 100 has been staked for 40 hours now, so its 4 in rewards.
-        await betterTimesToken.stake(1000, {from: owner});
+        await betterTimesToken.stakeTwo(1000, myName, myStory,{from: owner});
         await helper.advanceTimeAndBlock(3600*20);
 
         summary = await betterTimesToken.hasStake(owner);
@@ -150,13 +156,12 @@ contract("BetterTimesToken", async accounts => {
     });
 
     it("reward stakes", async() => {
-        betterTimesToken = await BetterTimesToken.deployed();
         // Use a fresh Account, send 1000 Tokens to it
         let staker = accounts[3];
         await betterTimesToken.transfer(staker, 1000);
         let initial_balance = await betterTimesToken.balanceOf(staker);
         // Make a stake on 200, fast forward 20 hours, claim reward, amount should be Initial balanace +4
-        await betterTimesToken.stake(200, {from: staker});
+        await betterTimesToken.stakeTwo(200, myName, myStory, {from: staker});
         await helper.advanceTimeAndBlock(3600*20);
 
         let stakeSummary = await betterTimesToken.hasStake(staker);

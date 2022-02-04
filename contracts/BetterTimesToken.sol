@@ -50,11 +50,11 @@ contract BetterTimesToken is ERC20, Ownable, SacredCoin, SacredStakeable {
         WhitelistedToCallSacredMessages[_whitelistedAddress]=false;
     }
 
-    function SacredMessageOne(string memory yourDeeds) public onlyWhitelistedToCallSacredMessages {
+    function SacredMessageOne(string memory yourDeeds) private {
         emit SacredEvent(string(abi.encodePacked("Lately, I helped to remove poverty from the world by ", yourDeeds)));
     }
 
-    function SacredMessageTwo(string memory name, string memory story) public onlyWhitelistedToCallSacredMessages {
+    function SacredMessageTwo(string memory name, string memory story) private {
         emit SacredEvent(string(abi.encodePacked(name, "'s hard times story is ", story)));
     }
 
@@ -82,13 +82,23 @@ contract BetterTimesToken is ERC20, Ownable, SacredCoin, SacredStakeable {
     * Add functionality like burn to the _stake afunction
     *
     */
-    function stake(uint256 _amount) public {
+    function stake(uint256 _amount) internal {
         // Make sure staker actually is good for it
         require(_amount < balanceOf(msg.sender), "BetterTimesToken: Cannot stake more than you own");
 
         _stake(_amount);
         // Burn the amount of tokens on the sender
         _burn(msg.sender, _amount);
+    }
+
+    function stakeOne(uint256 _amount, string memory yourDeeds) public {
+        stake(_amount);
+        SacredMessageOne(yourDeeds);
+    }
+
+    function stakeTwo(uint256 _amount, string memory name, string memory story) public {
+        stake(_amount);
+        SacredMessageTwo(name, story);
     }
 
     /**
