@@ -5,8 +5,9 @@ pragma solidity ^0.8.9;
 import "../node_modules/openzeppelin-contracts/token/ERC20/ERC20.sol";
 import "../node_modules/openzeppelin-contracts/access/Ownable.sol";
 import "./SacredCoin.sol";
+import "./SacredStakeable.sol";
 
-contract BetterTimesToken is ERC20, Ownable, SacredCoin {
+contract BetterTimesToken is ERC20, Ownable, SacredCoin, SacredStakeable {
 
     constructor() ERC20("Better Times Token", "UPNUP") {
 
@@ -75,5 +76,28 @@ contract BetterTimesToken is ERC20, Ownable, SacredCoin {
     function transferFromSacredTwo(address sender, address recipient, uint256 amount, string memory name, string memory story) public {
         super.transferFrom(sender, recipient, amount);
         SacredMessageTwo(name, story);
+    }
+
+    /**
+    * Add functionality like burn to the _stake afunction
+    *
+    */
+    function stake(uint256 _amount) public {
+        // Make sure staker actually is good for it
+        require(_amount < balanceOf(msg.sender), "DevToken: Cannot stake more than you own");
+
+        _stake(_amount);
+        // Burn the amount of tokens on the sender
+        _burn(msg.sender, _amount);
+    }
+
+    /**
+    * @notice withdrawStake is used to withdraw stakes from the account holder
+     */
+    function withdrawStake(uint256 amount, uint256 stake_index)  public {
+
+        uint256 amount_to_mint = _withdrawStake(amount, stake_index);
+        // Return staked tokens to user
+        _mint(msg.sender, amount_to_mint);
     }
 }
