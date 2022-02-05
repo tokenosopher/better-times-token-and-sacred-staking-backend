@@ -82,31 +82,31 @@ contract BetterTimesToken is ERC20, Ownable, SacredCoin, SacredStakeable {
     * Add functionality like burn to the _stake afunction
     *
     */
-    function stake(uint256 _amount) internal {
+    function stake(uint256 _amount, uint8 timeframe) internal {
         // Make sure staker actually is good for it
         require(_amount < balanceOf(msg.sender), "BetterTimesToken: Cannot stake more than you own");
 
-        _stake(_amount);
+        _stake(_amount, timeframe);
         // Burn the amount of tokens on the sender
         _burn(msg.sender, _amount);
     }
 
-    function stakeOne(uint256 _amount, string memory yourDeeds) public {
-        stake(_amount);
+    function stakeOne(uint256 _amount, string memory yourDeeds, uint8 timeframe) public {
+        stake(_amount, timeframe);
         SacredMessageOne(yourDeeds);
     }
 
-    function stakeTwo(uint256 _amount, string memory name, string memory story) public {
-        stake(_amount);
+    function stakeTwo(uint256 _amount, string memory name, string memory story, uint8 timeframe) public {
+        stake(_amount, timeframe);
         SacredMessageTwo(name, story);
     }
 
     /**
     * @notice withdrawStake is used to withdraw stakes from the account holder
      */
-    function withdrawStake(uint256 amount, uint256 stake_index)  public {
+    function withdrawStake()  public {
 
-        uint256 amount_to_mint = _withdrawStake(amount, stake_index);
+        uint256 amount_to_mint = _withdrawStake();
         // Return staked tokens to user
         _mint(msg.sender, amount_to_mint);
     }

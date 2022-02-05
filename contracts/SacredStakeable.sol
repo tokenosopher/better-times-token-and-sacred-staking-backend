@@ -30,7 +30,7 @@ contract SacredStakeable {
         // This claimable field is used to tell how big of a reward is currently available
         uint256 claimable;
         //Customization. This records the choice of staking time: 0=1 week, 1=2 weeks, 2=4 weeks.
-        uint8 timeframe;
+        uint256 timeframe;
     }
     /**
     * @notice Stakeholder is a staker that has active stakes
@@ -92,7 +92,7 @@ contract SacredStakeable {
     * _Stake is used to make a stake for an sender. It will remove the amount staked from the stakers account and place those tokens inside a stake container
     * StakeID 
     */
-    function _stake(uint256 _amount, uint8 timeframe) internal{
+    function _stake(uint256 _amount, uint256 timeframe) internal{
         // Simple check so that user does not stake 0 
         require(_amount > 0, "Cannot stake nothing");
         require(timeframe == 0 || timeframe == 1 || timeframe == 2, "timeframe value not valid");
@@ -116,7 +116,7 @@ contract SacredStakeable {
         stakeholders[index].since = timestamp;
 
         // Emit an event that the stake has occurred
-        emit Staked(msg.sender, _amount, index,timestamp);
+        emit Staked(msg.sender, _amount, timestamp);
 
         //Modification: set the timeframe based on
         if(timeframe==0) {
@@ -170,34 +170,28 @@ contract SacredStakeable {
         uint256 reward = calculateStakeReward(stakeholders[user_index]);
 
         delete stakeholders[user_index];
-        return amount+reward;
+        return currentAmount+reward;
     }
 
     /**
     * @notice
      * hasStake is used to check if a account has stakes and the total amount along with all the separate stakes
      */
-    function hasStake(address _staker) public view returns(bool hasStaked, StakingSummary memory){
+    function hasStake(address _staker) public view returns(bool isStaking, StakingSummary memory){
 
-        uint256 user_index = stakes[msg.sender];
+        StakingSummary memory summary = StakingSummary(0, 0);
 
-        if (user_index==0 )
+        uint256 user_index = stakes[_staker];
 
-        // totalStakeAmount is used to count total staked amount of the address
-        uint256 totalStakeAmount;
-        uint256 secondsToEndOfStakingRewards =  (stakeholders[_staker].since+stakeholders[_staker].block.timestamp
+        if (user_index==0 ) {
+            isStaking = false;
+        } else {
+            uint256 reward = calculateStakeReward(stakeholders[user_index]);
+            summary.total_amount=reward+stakeholders[user_index].amount;
 
-        // Keep a summary in memory since we need to calculate this
-        StakingSummary memory summary = StakingSummary(0, stakeholders[stakes[_staker]].address_stakes);
-        // Iterate over all stakes and grab amount of stakes
-        for (uint256 s = 0; s < summary.stakes.length; s += 1){
-            uint256 availableReward = calculateStakeReward(summary.stakes[s]);
-            summary.stakes[s].claimable = availableReward;
-            totalStakeAmount = totalStakeAmount+summary.stakes[s].amount;
+            summary.SecondsToEndOfStakingRewards = block.timestamp - stakeholders[user_index].since+stakeholders[user_index].timeframe;
         }
-        // Assign calculate amount to summary
-        summary.total_amount = totalStakeAmount;
-        return summary;
+        return (isStaking,summary);
     }
 
 }
