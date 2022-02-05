@@ -44,10 +44,10 @@ contract SacredStakeable {
     * @notice
      * StakingSummary is a struct that is used to contain all stakes performed by a certain account
      */
-//    struct StakingSummary{
-//        uint256 total_amount;
-//        Stake[] stakes;
-//    }
+    struct StakingSummary{
+        uint256 total_amount;
+        uint256 SecondsToEndOfStakingRewards;
+    }
 
     /**
     * @notice 
@@ -143,7 +143,13 @@ contract SacredStakeable {
         // the algorithm is  seconds = block.timestamp - stake seconds (block.timestamp - _stake.since)
         // hours = Seconds / 3600 (seconds /3600) 3600 is an variable in Solidity names hours
         // we then multiply each token by the hours staked , then divide by the rewardPerHour rate
-        return (((block.timestamp - _current_stake.since) / 1 hours) * _current_stake.amount) / rewardPerHour;
+        //Modification: if block.timestamp is after the staking timeframe, then the user does not receive reward:
+        if(block.timestamp > _current_stake.since + _current_stake.timeframe) {
+            return 0;
+        }
+        else {
+            return (((block.timestamp - _current_stake.since) / 1 hours) * _current_stake.amount) / rewardPerHour;
+        }
     }
 
     /**
@@ -153,26 +159,17 @@ contract SacredStakeable {
      * Will return the amount to MINT onto the account
      * Will also calculateStakeReward and reset timer
     */
-    function _withdrawStake(uint256 amount, uint256 index) internal returns(uint256){
+    function _withdrawStake() internal returns(uint256){
         // Grab user_index which is the index to use to grab the Stake[]
         uint256 user_index = stakes[msg.sender];
-        Stake memory current_stake = stakeholders[user_index].address_stakes[index];
-        require(current_stake.amount >= amount, "Staking: Cannot withdraw more than you have staked");
+        require(user_index!=0,"you do not have any coins staked");
+
+        uint256 currentAmount = stakeholders[user_index].amount;
 
         // Calculate available Reward first before we start modifying data
-        uint256 reward = calculateStakeReward(current_stake);
-        // Remove by subtracting the money unstaked
-        current_stake.amount = current_stake.amount - amount;
-        // If stake is empty, 0, then remove it from the array of stakes
-        if(current_stake.amount == 0){
-            delete stakeholders[user_index].address_stakes[index];
-        }else {
-            // If not empty then replace the value of it
-            stakeholders[user_index].address_stakes[index].amount = current_stake.amount;
-            // Reset timer of stake
-            stakeholders[user_index].address_stakes[index].since = block.timestamp;
-        }
+        uint256 reward = calculateStakeReward(stakeholders[user_index]);
 
+        delete stakeholders[user_index];
         return amount+reward;
     }
 
@@ -180,12 +177,19 @@ contract SacredStakeable {
     * @notice
      * hasStake is used to check if a account has stakes and the total amount along with all the separate stakes
      */
-    function hasStake(address _staker) public view returns(StakingSummary memory){
+    function hasStake(address _staker) public view returns(bool hasStaked, StakingSummary memory){
+
+        uint256 user_index = stakes[msg.sender];
+
+        if (user_index==0 )
+
         // totalStakeAmount is used to count total staked amount of the address
         uint256 totalStakeAmount;
+        uint256 secondsToEndOfStakingRewards =  (stakeholders[_staker].since+stakeholders[_staker].block.timestamp
+
         // Keep a summary in memory since we need to calculate this
         StakingSummary memory summary = StakingSummary(0, stakeholders[stakes[_staker]].address_stakes);
-        // Itterate all stakes and grab amount of stakes
+        // Iterate over all stakes and grab amount of stakes
         for (uint256 s = 0; s < summary.stakes.length; s += 1){
             uint256 availableReward = calculateStakeReward(summary.stakes[s]);
             summary.stakes[s].claimable = availableReward;
