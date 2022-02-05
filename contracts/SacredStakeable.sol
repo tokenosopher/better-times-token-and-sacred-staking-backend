@@ -20,6 +20,8 @@ contract SacredStakeable {
      * A stake struct is used to represent the way we store stakes, 
      * A Stake will contain the users address, the amount staked and a timestamp, 
      * Since which is when the stake was made
+     * @notice
+     * Customization: Only the Stake struct will be used
      */
     struct Stake{
         address user;
@@ -27,39 +29,41 @@ contract SacredStakeable {
         uint256 since;
         // This claimable field is used to tell how big of a reward is currently available
         uint256 claimable;
+        //Customization. This records the choice of staking time: 0=1 week, 1=2 weeks, 2=4 weeks.
+        uint8 timeframe;
     }
     /**
     * @notice Stakeholder is a staker that has active stakes
      */
-    struct Stakeholder{
-        address user;
-        Stake[] address_stakes;
-
-    }
+//    struct Stakeholder{
+//        address user;
+//        Stake[] address_stakes;
+//
+//    }
     /**
     * @notice
      * StakingSummary is a struct that is used to contain all stakes performed by a certain account
      */
-    struct StakingSummary{
-        uint256 total_amount;
-        Stake[] stakes;
-    }
+//    struct StakingSummary{
+//        uint256 total_amount;
+//        Stake[] stakes;
+//    }
 
     /**
     * @notice 
     *   This is a array where we store all Stakes that are performed on the Contract
     *   The stakes for each address are stored at a certain index, the index can be found using the stakes mapping
     */
-    Stakeholder[] internal stakeholders;
+    Stake[] internal stakeholders;
     /**
     * @notice 
-    * stakes is used to keep track of the INDEX for the stakers in the stakes array
+    * stakes is used to keep track of the INDEX for the stakers in the stakeholders array
      */
     mapping(address => uint256) internal stakes;
     /**
     * @notice Staked event is triggered whenever a user stakes tokens, address is indexed to make it filterable
      */
-    event Staked(address indexed user, uint256 amount, uint256 index, uint256 timestamp);
+    event Staked(address indexed user, uint256 amount, uint256 timestamp);
 
     /**
      * @notice
@@ -88,9 +92,10 @@ contract SacredStakeable {
     * _Stake is used to make a stake for an sender. It will remove the amount staked from the stakers account and place those tokens inside a stake container
     * StakeID 
     */
-    function _stake(uint256 _amount) internal{
+    function _stake(uint256 _amount, uint8 timeframe) internal{
         // Simple check so that user does not stake 0 
         require(_amount > 0, "Cannot stake nothing");
+        require(timeframe == 0 || timeframe == 1 || timeframe == 2, "timeframe value not valid");
 
 
         // Mappings in solidity creates all values, but empty, so we can just check the address
@@ -103,13 +108,26 @@ contract SacredStakeable {
             // We need to add him to the stakeHolders and also map it into the Index of the stakes
             // The index returned will be the index of the stakeholder in the stakeholders array
             index = _addStakeholder(msg.sender);
+            stakeholders[index].amount = _amount;
         }
+        else {
+            _amount = calculateStakeReward(stakeholders[index]) + _amount;
+        }
+        stakeholders[index].since = timestamp;
 
-        // Use the index to push a new Stake
-        // push a newly created Stake with the current block timestamp.
-        stakeholders[index].address_stakes.push(Stake(msg.sender, _amount, timestamp,0));
         // Emit an event that the stake has occurred
         emit Staked(msg.sender, _amount, index,timestamp);
+
+        //Modification: set the timeframe based on
+        if(timeframe==0) {
+        stakeholders[index].timeframe = 1 weeks;
+        }
+        else if(timeframe==1) {
+            stakeholders[index].timeframe = 2 weeks;
+        }
+        else if(timeframe==2) {
+            stakeholders[index].timeframe = 3 weeks;
+        }
     }
 
     /**
