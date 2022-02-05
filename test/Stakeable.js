@@ -290,7 +290,7 @@ contract("BetterTimesToken", async accounts => {
 
         //let's advance one hour more, thus passing the deadline::
         let oneWeek= 168 //hours
-        await helper.advanceTimeAndBlock(3600*1);
+        await helper.advanceTimeAndBlock(3600*1.1);
 
         stake = await betterTimesToken.hasStake(timeTraveler);
 
@@ -311,9 +311,39 @@ contract("BetterTimesToken", async accounts => {
 
     })
 
-    it("removing an account and adding it still leaves the account with full functionallity", async () => {
+    it("removing a stake updates the balance correctly" +
+        "and adding a new stake still leaves the account with full functionallity", async () => {
+        let stake_amount= 100
+        let timeTraveler = accounts[2]
+        let timeTravelerBalance = await betterTimesToken.balanceOf(timeTraveler)
+        let timeTravelerStakedTotal = await betterTimesToken.hasStake(timeTraveler)
+        timeTravelerStakedTotal = timeTravelerStakedTotal.totalAmount
 
+        //withdrawing the stake
+        await betterTimesToken.withdrawStake({from:timeTraveler})
+
+        //getting the updated balance
+        let timeTravelerBalanceUpdated = await betterTimesToken.balanceOf(timeTraveler)
+
+        assert.equal(timeTravelerBalanceUpdated.toNumber(),
+            timeTravelerBalance.toNumber()+timeTravelerStakedTotal.toNumber(),
+            "balance does not update after removing the stake")
+
+        //restaking:
+        await betterTimesToken.stakeOne(stake_amount, myDeed, 0, {from: timeTraveler});
+
+        //advancing in time:
+        await helper.advanceTimeAndBlock(3600*100)
+
+        //checking that the stake has been updated:
+        let stake = await betterTimesToken.hasStake(timeTraveler)
+
+        //check that the value has been updated. After 100 hours, the stake amount should have increased by 0.1
+        assert.equal(stake.totalAmount.toNumber(), stake_amount+(stake_amount*0.1),
+            "stake amount not as expected")
     })
+
+
 
 
 
