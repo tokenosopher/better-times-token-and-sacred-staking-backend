@@ -126,7 +126,7 @@ contract SacredStakeable {
             stakeholders[index].timeframe = 2 weeks;
         }
         else if(timeframe==2) {
-            stakeholders[index].timeframe = 3 weeks;
+            stakeholders[index].timeframe = 4 weeks;
         }
     }
 
@@ -154,6 +154,25 @@ contract SacredStakeable {
 
     /**
      * @notice
+     * function to remove an element from the stakeholders array:
+    */
+    function removeFromStakeholders(uint index) private {
+        if (index == stakeholders.length - 1) {
+            stakeholders.pop();
+        }
+        else{
+            //moving stakeholders and stakes:
+            stakeholders[index] = stakeholders[stakeholders.length - 1];
+
+            //removing both:
+            stakeholders.pop();
+        }
+        delete stakes[msg.sender];
+    }
+
+
+    /**
+     * @notice
      * withdrawStake takes in an amount and a index of the stake and will remove tokens from that stake
      * Notice index of the stake is the users stake counter, starting at 0 for the first stake
      * Will return the amount to MINT onto the account
@@ -169,29 +188,36 @@ contract SacredStakeable {
         // Calculate available Reward first before we start modifying data
         uint256 reward = calculateStakeReward(stakeholders[user_index]);
 
-        delete stakeholders[user_index];
+        removeFromStakeholders(user_index);
         return currentAmount+reward;
     }
+
 
     /**
     * @notice
      * hasStake is used to check if a account has stakes and the total amount along with all the separate stakes
      */
-    function hasStake(address _staker) public view returns(bool isStaking, StakingSummary memory){
+    function hasStake(address _staker) public view returns(bool isStaking, StakingSummary memory, uint user_index){
 
         StakingSummary memory summary = StakingSummary(0, 0);
 
-        uint256 user_index = stakes[_staker];
+        user_index = stakes[_staker];
 
-        if (user_index==0 ) {
+        if (user_index==0) {
             isStaking = false;
         } else {
+            isStaking=true;
             uint256 reward = calculateStakeReward(stakeholders[user_index]);
             summary.total_amount=reward+stakeholders[user_index].amount;
 
             summary.SecondsToEndOfStakingRewards = block.timestamp - stakeholders[user_index].since+stakeholders[user_index].timeframe;
         }
-        return (isStaking,summary);
+        return (isStaking,summary, user_index);
     }
 
+    function returnIndex(address _staker) public view returns(uint user_index){
+
+        return stakes[_staker];
+
+}
 }
