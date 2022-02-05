@@ -100,11 +100,11 @@ contract("BetterTimesToken", async accounts => {
         }
     });
 
+    // it("calling the hasStake function will ")
+
     it("withdrawing stake leads to isStaking being false, and StakingSummary being 0,0", async () => {
         await betterTimesToken.withdrawStake({from:owner});
-        // let hasStake = await betterTimesToken.hasStake(accounts[1])
-        // let hasStake2 = await betterTimesToken.hasStake(accounts[2])
-        let hasStake3 = await betterTimesToken.hasStake(owner)
+        let hasStake = await betterTimesToken.hasStake(owner)
         // console.log(hasStake3.isStaking)
         // console.log(hasStake3)
         // console.log(hasStake3.user_index.toString())

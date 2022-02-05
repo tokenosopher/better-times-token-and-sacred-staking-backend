@@ -154,20 +154,11 @@ contract SacredStakeable {
 
     /**
      * @notice
-     * function to remove an element from the stakeholders array:
+     * function to remove a stake and the stakeholder:
     */
-    function removeFromStakeholders(uint index) private {
-        if (index == stakeholders.length - 1) {
-            stakeholders.pop();
-        }
-        else{
-            //moving stakeholders and stakes:
-            stakeholders[index] = stakeholders[stakeholders.length - 1];
-
-            //removing both:
-            stakeholders.pop();
-        }
+    function removeStakeholder(uint index) private {
         delete stakes[msg.sender];
+        delete stakeholders[index];
     }
 
 
@@ -188,7 +179,7 @@ contract SacredStakeable {
         // Calculate available Reward first before we start modifying data
         uint256 reward = calculateStakeReward(stakeholders[user_index]);
 
-        removeFromStakeholders(user_index);
+        removeStakeholder(user_index);
         return currentAmount+reward;
     }
 
