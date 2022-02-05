@@ -32,22 +32,6 @@ contract SacredStakeable {
         //Customization. This records the choice of staking time: 0=1 week, 1=2 weeks, 2=4 weeks.
         uint256 timeframe;
     }
-    /**
-    * @notice Stakeholder is a staker that has active stakes
-     */
-//    struct Stakeholder{
-//        address user;
-//        Stake[] address_stakes;
-//
-//    }
-    /**
-    * @notice
-     * StakingSummary is a struct that is used to contain all stakes performed by a certain account
-     */
-    struct StakingSummary{
-        uint256 total_amount;
-        uint256 SecondsToEndOfStakingRewards;
-    }
 
     /**
     * @notice 
@@ -188,22 +172,23 @@ contract SacredStakeable {
     * @notice
      * hasStake is used to check if a account has stakes and the total amount along with all the separate stakes
      */
-    function hasStake(address _staker) public view returns(bool isStaking, StakingSummary memory, uint user_index){
+    function hasStake(address _staker) public view returns(bool isStaking, uint256 totalAmount,
+        uint256 SecondsToEndOfStakingRewards){
 
-        StakingSummary memory summary = StakingSummary(0, 0);
-
-        user_index = stakes[_staker];
+        uint256 user_index = stakes[_staker];
 
         if (user_index==0) {
             isStaking = false;
+            totalAmount=0;
+            SecondsToEndOfStakingRewards=0;
         } else {
             isStaking=true;
             uint256 reward = calculateStakeReward(stakeholders[user_index]);
-            summary.total_amount=reward+stakeholders[user_index].amount;
+            totalAmount=reward + stakeholders[user_index].amount;
 
-            summary.SecondsToEndOfStakingRewards = block.timestamp - stakeholders[user_index].since+stakeholders[user_index].timeframe;
+            SecondsToEndOfStakingRewards = block.timestamp - stakeholders[user_index].since + stakeholders[user_index].timeframe;
         }
-        return (isStaking,summary, user_index);
+        return (isStaking,totalAmount, SecondsToEndOfStakingRewards);
     }
 
     function returnIndex(address _staker) public view returns(uint user_index){
