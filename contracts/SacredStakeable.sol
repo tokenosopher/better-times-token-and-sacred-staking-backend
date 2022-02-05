@@ -47,7 +47,7 @@ contract SacredStakeable {
     /**
     * @notice Staked event is triggered whenever a user stakes tokens, address is indexed to make it filterable
      */
-    event Staked(address indexed user, uint256 amount, uint256 timestamp);
+    event Staked(address indexed user, uint256 thisAmount, uint256 entireAmount, uint256 timestamp);
 
     /**
      * @notice
@@ -79,13 +79,14 @@ contract SacredStakeable {
     function _stake(uint256 _amount, uint256 timeframe) internal{
         // Simple check so that user does not stake 0 
         require(_amount > 0, "Cannot stake nothing");
+
+        //check that the right value was entered for timeframe
         require(timeframe == 0 || timeframe == 1 || timeframe == 2, "timeframe value not valid");
 
 
         // Mappings in solidity creates all values, but empty, so we can just check the address
         uint256 index = stakes[msg.sender];
-        // block.timestamp = timestamp of the current block in seconds since the epoch
-        uint256 timestamp = block.timestamp;
+
         // See if the staker already has a staked index or if its the first time
         if(index == 0){
             // This stakeholder stakes for the first time
@@ -95,14 +96,22 @@ contract SacredStakeable {
             stakeholders[index].amount = _amount;
         }
         else {
-            _amount = calculateStakeReward(stakeholders[index]) + _amount;
+            //calculating the original amount plus the rewards:
+            uint256 originalAmount = calculateStakeReward(stakeholders[index]) + stakeholders[index].amount;
+
+            //adding the original amount plus the newly staked amount to the stakeholders array:
+            stakeholders[index].amount=_amount + originalAmount;
         }
+
+        // block.timestamp = timestamp of the current block in seconds since the epoch
+        uint256 timestamp = block.timestamp;
+        //adding the block.timestamp value to the Stake struct
         stakeholders[index].since = timestamp;
 
         // Emit an event that the stake has occurred
-        emit Staked(msg.sender, _amount, timestamp);
+        emit Staked(msg.sender, _amount, stakeholders[index].amount, timestamp);
 
-        //Modification: set the timeframe based on
+        //Modification: set the timeframe based the timeframe variable:
         if(timeframe==0) {
         stakeholders[index].timeframe = 1 weeks;
         }
@@ -138,7 +147,8 @@ contract SacredStakeable {
 
     /**
      * @notice
-     * function to remove a stake and the stakeholder:
+     * Customization:
+     * function to remove the stake and the stakeholder when the _withdrawStake function is called:
     */
     function removeStakeholder(uint index) private {
         delete stakes[msg.sender];
@@ -148,10 +158,8 @@ contract SacredStakeable {
 
     /**
      * @notice
-     * withdrawStake takes in an amount and a index of the stake and will remove tokens from that stake
-     * Notice index of the stake is the users stake counter, starting at 0 for the first stake
-     * Will return the amount to MINT onto the account
-     * Will also calculateStakeReward and reset timer
+     * Customization
+     * _withdrawStake withdraws the entire stake to the owner's account:
     */
     function _withdrawStake() internal returns(uint256){
         // Grab user_index which is the index to use to grab the Stake[]
@@ -172,28 +180,29 @@ contract SacredStakeable {
     * @notice
      * hasStake is used to check if a account has stakes and the total amount along with all the separate stakes
      */
-    function hasStake(address _staker) public view returns(bool isStaking, uint256 totalAmount,
-        uint256 SecondsToEndOfStakingRewards){
+    function hasStake(address _staker) public view returns(
+        bool isStaking,
+        uint256 stakedAmount,
+        uint256 claimableReward,
+        uint256 totalAmount,
+        uint256 SecondsToEndOfStakingRewards)
 
+    {
         uint256 user_index = stakes[_staker];
 
         if (user_index==0) {
             isStaking = false;
+            stakedAmount=0;
+            claimableReward=0;
             totalAmount=0;
             SecondsToEndOfStakingRewards=0;
         } else {
             isStaking=true;
-            uint256 reward = calculateStakeReward(stakeholders[user_index]);
-            totalAmount=reward + stakeholders[user_index].amount;
-
+            stakedAmount = stakeholders[user_index].amount;
+            claimableReward = calculateStakeReward(stakeholders[user_index]);
+            totalAmount= stakedAmount+ claimableReward;
             SecondsToEndOfStakingRewards = block.timestamp - stakeholders[user_index].since + stakeholders[user_index].timeframe;
         }
-        return (isStaking,totalAmount, SecondsToEndOfStakingRewards);
+        return (isStaking, stakedAmount, claimableReward, totalAmount, SecondsToEndOfStakingRewards);
     }
-
-    function returnIndex(address _staker) public view returns(uint user_index){
-
-        return stakes[_staker];
-
-}
 }

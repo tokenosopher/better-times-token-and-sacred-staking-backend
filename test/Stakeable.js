@@ -33,6 +33,7 @@ contract("BetterTimesToken", async accounts => {
         // await betterTimesToken.mint(accounts[1], 1000);
         // Get init balance of user
         let balance = await betterTimesToken.balanceOf(owner)
+        console.log(`original balance before staking is ${balance.toString()}`)
 
         // Stake the amount, notice the FROM parameter which specifes what the msg.sender address will be
 
@@ -45,7 +46,7 @@ contract("BetterTimesToken", async accounts => {
             "Staked",
             (ev) => {
                 // In here we can do our assertion on the ev variable (it's the event and will contain the values we emitted)
-                assert.equal(ev.amount, stake_amount, "Stake amount in event was not correct");
+                assert.equal(ev.thisAmount, stake_amount, "Stake amount in event was not correct");
                 return true;
             },
             "Stake event should have triggered");
@@ -72,7 +73,7 @@ contract("BetterTimesToken", async accounts => {
             "Staked",
             (ev) => {
                 // In here we can do our assertion on the ev variable (it's the event and will contain the values we emitted)
-                assert.equal(ev.amount, stake_amount, "Stake amount in event was not correct");
+                assert.equal(ev.entireAmount, stake_amount*2, "Stake amount in event was not correct");
                 return true;
             },
             "Stake event should have triggered");
@@ -103,100 +104,220 @@ contract("BetterTimesToken", async accounts => {
     // it("calling the hasStake function will ")
 
     it("withdrawing stake leads to isStaking being false, and StakingSummary being 0,0", async () => {
+        // Stake again on owner because we want to check if the 2nd iteration takes place correctly:
+
         await betterTimesToken.withdrawStake({from:owner});
         let hasStake = await betterTimesToken.hasStake(owner)
-        // console.log(hasStake3.isStaking)
-        // console.log(hasStake3)
-        // console.log(hasStake3.user_index.toString())
-        let index = await betterTimesToken.returnIndex(owner)
-        console.log(index.toString())
+        assert.equal(hasStake.isStaking, false, "staking should be false.")
+        assert.equal(hasStake.totalAmount, 0, "staking amount should be zero")
+        assert.equal(hasStake.SecondsToEndOfStakingRewards, 0, "Time to staking rewards should be 0")
+    })
+
+    it("withdrawing stake places the entire amount of coins back into the staker's wallet", async () => {
+        let balanceAmount = await betterTimesToken.balanceOf(owner)
+        assert.equal(balanceAmount.toString(), "679000000000000000000000000", "returned amount is not right")
+    })
+
+    it("token holder should be able to transfer tokens to someone else, via all three transfer methods", async () => {
+        let transfer_amount = 1000;
+        let recipient = accounts[1]
+
+        //declaring the variable that will hold the transfer message:
+        let transferIdSacredMessage;
+
+        //a simple transfer call:
+        let transferIdSimple = await betterTimesToken.transfer(recipient, transfer_amount)
+        truffleAssert.eventEmitted(
+            transferIdSimple,
+            "Transfer",
+            (ev) => {
+                // In here we can do our assertion on the ev variable (it's the event and will contain the values we emitted)
+                assert.equal(ev.from, owner, "Sender is correct");
+                assert.equal(ev.to, recipient, "Recipient is correct");
+                assert.equal(ev.value, transfer_amount, "transfer amount not correct")
+                return true;
+            },
+            "Stake event should have triggered");
+
+        let balance_recipient = await betterTimesToken.balanceOf(recipient)
+        assert.equal(transfer_amount, balance_recipient, "the transfer amount and the recipient do not match")
+
+
+        //a transfer call with sacred message one:
+        transferIdSacredMessage = await betterTimesToken.transferSacredOne(recipient, transfer_amount, myDeed)
+        truffleAssert.eventEmitted(
+            transferIdSacredMessage,
+            "SacredEvent",
+            (ev) => {
+                // In here we can do our assertion on the ev variable (it's the event and will contain the values we emitted)
+                assert.equal(ev.BetterTimesMessage, expectedSacredEventOne, "Stake message was not correct");
+                return true;
+            },
+            "Stake event should have triggered");
+
+        //a transfer call with sacred message two:
+        transferIdSacredMessage = await betterTimesToken.transferSacredTwo(recipient, transfer_amount, myName, myStory);
+        truffleAssert.eventEmitted(
+            transferIdSacredMessage,
+            "SacredEvent",
+            (ev) => {
+                // In here we can do our assertion on the ev variable (it's the event and will contain the values we emitted)
+                assert.equal(ev.BetterTimesMessage, expectedSacredEventTwo, "Stake message was not correct");
+                return true;
+            },
+            "Stake event should have triggered");
+
+
+        //testing to see if the transfer amount is correct after all three transfers:
+        balance_recipient = await betterTimesToken.balanceOf(recipient)
+        assert.equal(balance_recipient.toString(), transfer_amount*3, "the transfer amount and the recipient do not match")
+    })
+
+
+    it("new stakeholder should have increased index, and their balance should update after staking", async () => {
+        let stake_amount = 100;
+        let staker = accounts[1];
+
+        //retrieving the balance of staker before staking:
+
+        let initialBalance = await betterTimesToken.balanceOf(staker)
+
+        let stakeID = await betterTimesToken.stakeOne(stake_amount, myDeed, 0, {from: staker});
+        // Assert on the emittedevent using truffleassert
+        // This will capture the event and inside the event callback we can use assert on the values returned
+        truffleAssert.eventEmitted(
+            stakeID,
+            "Staked",
+            (ev) => {
+                // In here we can do our assertion on the ev variable (its the event and will contain the values we emitted)
+                assert.equal(ev.thisAmount, stake_amount, "Stake amount in event was not correct");
+                return true;
+            },
+            "Stake event should have triggered");
+
+        //checking the balance of staker after staking is reduced
+        let expectedBalance = initialBalance-stake_amount
+        let balanceAfterStaking = await betterTimesToken.balanceOf(staker)
+
+        assert.equal(balanceAfterStaking, expectedBalance, "balance is not as expected")
+    })
+
+    //
+    it("calculate rewards", async() => {
+        let transferredToTimeTraveler = 10000
+        let stake_amount=1000;
+        let timeTraveler = accounts[2]
+
+        //first, let's transfer some tokens to the timeTraveler account(which is currently empty):
+        await betterTimesToken.transfer(timeTraveler, transferredToTimeTraveler)
+
+        //now, let's stake:
+        await betterTimesToken.stakeOne(stake_amount, myDeed, 0, {from: timeTraveler});
+
+        // fast-forward time by 20 Hours
+        await helper.advanceTimeAndBlock(3600*20);
+
+        //call the hasStaking function that contains the reward calculation:
+        let stake = await betterTimesToken.hasStake(timeTraveler);
+
+        //see if we gain 2% reward :
+        assert.equal(stake.claimableReward.toString(), stake_amount*0.02,
+            "Reward should be 2 after staking for twenty hours with 100")
+
+        //fast forward another 20 hours
+        await helper.advanceTimeAndBlock(3600*20);
+
+        stake = await betterTimesToken.hasStake(timeTraveler);
+
+        //see if we gained a 4% reward:
+        assert.equal(stake.claimableReward.toString(), stake_amount*0.04,
+            "Reward should be 4 after staking for forty hours with 100")
+
+        //stake some more, which should automatically compound the reward and reset the timer:
+        await betterTimesToken.stakeTwo(stake_amount, myName, myStory, 0, {from: timeTraveler});
+
+        //fast forward another 20 hours:
+        await helper.advanceTimeAndBlock(3600*20);
+
+        //see if the calculations for the reward stick:
+        stake = await betterTimesToken.hasStake(timeTraveler);
+
+        //the expected staked amount currently registered should be
+        //the stake amount*0.04 - which were the total rewards that were received when the autocompounding occurred
+        //during the last staking
+        //plus
+        //the stake amount*2 because we staked twice - once in the beginning, and once before the last time travel
+        let expectedStakedAmount = (stake_amount*0.04)+(stake_amount*2)
+
+        //the expected total amount should be the expected staked amount above *0.02
+        // because that's how long we time traveled since the last stake
+        //plus
+        //the expected staked amount
+        let expectedTotalAmount = (expectedStakedAmount*0.02)+expectedStakedAmount
+
+        assert.equal(stake.stakedAmount.toString(), Math.floor(expectedStakedAmount),
+            "actual and expected staked amounts are not equal")
+
+        assert.equal(stake.totalAmount.toString(), Math.floor(expectedTotalAmount),
+            "actual and expected total amounts are not equal")
+    });
+
+    it("waiting for just before the deadline gets you the most rewards " +
+        "and waiting longer than the staking time invalidates rewards", async () => {
+
+        //pulling some of the values from the last test:
+        let stake_amount=1000;
+        let timeTraveler = accounts[2]
+        let expectedStakedAmount = (stake_amount*0.04)+(stake_amount*2)
+        let alreadyAdvanced = 20 //hours since the last stake in the previous test
+
+        //let's advance time up to an hour before the deadline:
+        let almostOneWeek = 168-1 //hours
+        await helper.advanceTimeAndBlock(3600*(almostOneWeek-alreadyAdvanced));
+
+        //the last stake
+        let stake = await betterTimesToken.hasStake(timeTraveler);
+
+        //calculating stake multiplier, which is based on the amount of hours passed since the last stake:
+        let stakeMultiplier = 167 * 0.001
+
+        //calculating expected totalAmount:
+        let expectedTotalAmount = (expectedStakedAmount*stakeMultiplier)+expectedStakedAmount
+
+        //checking if the expected total amount is the same as the actual total amount:
+        assert.equal(stake.totalAmount.toString(), Math.floor(expectedTotalAmount),
+            "actual and expected total amounts are not equal just before deadline")
+
+        //let's advance one hour more, thus passing the deadline::
+        let oneWeek= 168 //hours
+        await helper.advanceTimeAndBlock(3600*1);
+
+        stake = await betterTimesToken.hasStake(timeTraveler);
+
+        //the expected total amount should now be the same as the expectedStakeAmount,
+        //because the deadline passed:
+        assert.equal(stake.totalAmount.toString(), Math.floor(expectedStakedAmount),
+            "stake amount should equal to total amount just after deadline")
+
+        //let's go crazy and advance another 5000 hours, just to be sure that the rewards stay 0:
+        await helper.advanceTimeAndBlock(3600*5000);
+
+        stake = await betterTimesToken.hasStake(timeTraveler);
+
+        //the expected total amount should still be the same as the expectedStakeAmount,
+        //because the deadline passed:
+        assert.equal(stake.totalAmount.toString(), Math.floor(expectedStakedAmount),
+            "stake amount should equal to total amount just after deadline")
 
     })
 
-    // it("new stakeholder should have increased index", async () => {
-    //     let stake_amount = 100;
-    //     let stakeID = await betterTimesToken.stakeOne(stake_amount, myDeed,{from: accounts[1]});
-    //     // Assert on the emittedevent using truffleassert
-    //     // This will capture the event and inside the event callback we can use assert on the values returned
-    //     truffleAssert.eventEmitted(
-    //         stakeID,
-    //         "Staked",
-    //         (ev) => {
-    //             // In here we can do our assertion on the ev variable (its the event and will contain the values we emitted)
-    //             assert.equal(ev.amount, stake_amount, "Stake amount in event was not correct");
-    //             assert.equal(ev.index, 2, "Stake index was not correct");
-    //             return true;
-    //         },
-    //         "Stake event should have triggered");
-    // })
-    //
+    it("removing an account and adding it still leaves the account with full functionallity", async () => {
 
-    //
-    // it("cant withdraw bigger amount than current stake", async() => {
-    //
-    //     let owner = accounts[0];
-    //
-    //     // Try withdrawing 200 from first stake
-    //     try {
-    //         await betterTimesToken.withdrawStake(200, 0, {from:owner});
-    //     }catch(error){
-    //         assert.equal(error.reason, "Staking: Cannot withdraw more than you have staked", "Failed to notice a too big withdrawal from stake");
-    //     }
-    // });
-    //
-    // it("withdraw 50 from a stake", async() => {
-    //
-    //     let owner = accounts[0];
-    //     let withdraw_amount = 50;
-    //     // Try withdrawing 50 from first stake
-    //     await betterTimesToken.withdrawStake(withdraw_amount, 0, {from:owner});
-    //     // Grab a new summary to see if the total amount has changed
-    //     let summary = await betterTimesToken.hasStake(owner);
-    //
-    //     assert.equal(summary.total_amount, 200-withdraw_amount, "The total staking amount should be 150");
-    //     // Itterate all stakes and verify their amount aswell.
-    //     let stake_amount = summary.stakes[0].amount;
-    //
-    //     assert.equal(stake_amount, 100-withdraw_amount, "Wrong Amount in first stake after withdrawal");
-    // });
-    //
-    // it("remove stake if empty", async() => {
-    //
-    //     let owner = accounts[0];
-    //     let withdraw_amount = 50;
-    //     // Try withdrawing 50 from first stake AGAIN, this should empty the first stake
-    //     await betterTimesToken.withdrawStake(withdraw_amount, 0, {from:owner});
-    //     // Grab a new summary to see if the total amount has changed
-    //     let summary = await betterTimesToken.hasStake(owner);
-    //
-    //     assert.equal(summary.stakes[0].user, "0x0000000000000000000000000000000000000000", "Failed to remove stake when it was empty");
-    // });
-    //
-    // it("calculate rewards", async() => {
-    //
-    //     let owner = accounts[0];
-    //
-    //     // Owner has 1 stake at this time, its the index 1 with 100 Tokens staked
-    //     // So lets fast forward time by 20 Hours and see if we gain 2% reward
-    //     const newBlock = await helper.advanceTimeAndBlock(3600*20);
-    //     let summary = await betterTimesToken.hasStake(owner);
-    //
-    //
-    //     let stake = summary.stakes[1];
-    //     assert.equal(stake.claimable, 100*0.02, "Reward should be 2 after staking for twenty hours with 100")
-    //     // Make a new Stake for 1000, fast forward 20 hours again, and make sure total stake reward is 24 (20+4)
-    //     // Remember that the first 100 has been staked for 40 hours now, so its 4 in rewards.
-    //     await betterTimesToken.stakeTwo(1000, myName, myStory,{from: owner});
-    //     await helper.advanceTimeAndBlock(3600*20);
-    //
-    //     summary = await betterTimesToken.hasStake(owner);
-    //
-    //     stake = summary.stakes[1];
-    //     let newstake = summary.stakes[2];
-    //
-    //     assert.equal(stake.claimable, (100*0.04), "Reward should be 4 after staking for 40 hours")
-    //     assert.equal(newstake.claimable, (1000*0.02), "Reward should be 20 after staking 20 hours");
-    // });
+    })
+
+
+
+
     //
     // it("reward stakes", async() => {
     //     // Use a fresh Account, send 1000 Tokens to it

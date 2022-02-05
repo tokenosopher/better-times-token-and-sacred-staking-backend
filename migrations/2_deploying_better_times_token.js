@@ -9,6 +9,6 @@ module.exports = async function (deployer, network, accounts) {
     await deployer.deploy(BetterTimesToken)
     const betterTimesToken = await BetterTimesToken.deployed()
 
-    await betterTimesToken.transfer(accounts[1], tokens('100'))
-    await betterTimesToken.balanceOf(accounts[1])
+    // await betterTimesToken.transfer(accounts[1], tokens('100'))
+    // await betterTimesToken.balanceOf(accounts[1])
 }
