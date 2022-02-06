@@ -27,8 +27,8 @@ contract SacredStakeable {
         address user;
         uint256 amount;
         uint256 since;
-        // This claimable field is used to tell how big of a reward is currently available
-        uint256 claimable;
+        //Customization. This records the rewardPerHour that will determine the rewards
+        uint256 rewardPerHour;
         //Customization. This records the choice of staking time: 0=1 week, 1=2 weeks, 2=4 weeks.
         uint256 timeframe;
     }
@@ -39,22 +39,31 @@ contract SacredStakeable {
     *   The stakes for each address are stored at a certain index, the index can be found using the stakes mapping
     */
     Stake[] internal stakeholders;
+
     /**
     * @notice 
     * stakes is used to keep track of the INDEX for the stakers in the stakeholders array
-     */
+    */
     mapping(address => uint256) internal stakes;
+
     /**
     * @notice Staked event is triggered whenever a user stakes tokens, address is indexed to make it filterable
-     */
+    */
     event Staked(address indexed user, uint256 thisAmount, uint256 entireAmount, uint256 timestamp);
 
     /**
-     * @notice
-      rewardPerHour is 1000 because it is used to represent 0.001, since we only use integer numbers
-      This will give users 0.1% reward for each staked token / H
-     */
-    uint256 internal rewardPerHour = 1000;
+    * @notice
+    *Customization: reward per hour is more the smaller the timeframe:
+    *For the month, reward is 0.1%
+    *For the two week period, it's 0.14%
+    *For a one week period, it's 0.2%
+    *So the weekly period offers double the rewards of the monthly period!
+    *NOTE: If no compounding is done during this period, either by staking more coins or by removing the stake,
+    *then the reward is lost! (see documentation)
+    */
+    uint256 internal rewardPerHourWeek = 500;
+    uint256 internal rewardPerHourTwoWeeks = 625;
+    uint256 internal rewardPerHourMonth = 1000;
 
     /**
     * @notice _addStakeholder takes care of adding a stakeholder to the stakeholders array
@@ -83,7 +92,6 @@ contract SacredStakeable {
         //check that the right value was entered for timeframe
         require(timeframe == 0 || timeframe == 1 || timeframe == 2, "timeframe value not valid");
 
-
         // Mappings in solidity creates all values, but empty, so we can just check the address
         uint256 index = stakes[msg.sender];
 
@@ -111,15 +119,18 @@ contract SacredStakeable {
         // Emit an event that the stake has occurred
         emit Staked(msg.sender, _amount, stakeholders[index].amount, timestamp);
 
-        //Modification: set the timeframe based the timeframe variable:
+        //Modification: set the timeframe and the reward per hour based the timeframe variable:
         if(timeframe==0) {
         stakeholders[index].timeframe = 1 weeks;
+        stakeholders[index].rewardPerHour = rewardPerHourWeek;
         }
         else if(timeframe==1) {
             stakeholders[index].timeframe = 2 weeks;
+            stakeholders[index].rewardPerHour = rewardPerHourTwoWeeks;
         }
         else if(timeframe==2) {
             stakeholders[index].timeframe = 4 weeks;
+            stakeholders[index].rewardPerHour = rewardPerHourMonth;
         }
     }
 
@@ -141,7 +152,8 @@ contract SacredStakeable {
             return 0;
         }
         else {
-            return (((block.timestamp - _current_stake.since) / 1 hours) * _current_stake.amount) / rewardPerHour;
+            return (((block.timestamp - _current_stake.since) / 1 hours)
+            * _current_stake.amount) / _current_stake.rewardPerHour;
         }
     }
 

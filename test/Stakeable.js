@@ -221,7 +221,7 @@ contract("BetterTimesToken", async accounts => {
         let stake = await betterTimesToken.hasStake(timeTraveler);
 
         //see if we gain 2% reward :
-        assert.equal(stake.claimableReward.toString(), stake_amount*0.02,
+        assert.equal(stake.claimableReward.toString(), stake_amount*0.04,
             "Reward should be 2 after staking for twenty hours with 100")
 
         //fast forward another 20 hours
@@ -230,7 +230,7 @@ contract("BetterTimesToken", async accounts => {
         stake = await betterTimesToken.hasStake(timeTraveler);
 
         //see if we gained a 4% reward:
-        assert.equal(stake.claimableReward.toString(), stake_amount*0.04,
+        assert.equal(stake.claimableReward.toString(), stake_amount*0.08,
             "Reward should be 4 after staking for forty hours with 100")
 
         //stake some more, which should automatically compound the reward and reset the timer:
@@ -247,13 +247,13 @@ contract("BetterTimesToken", async accounts => {
         //during the last staking
         //plus
         //the stake amount*2 because we staked twice - once in the beginning, and once before the last time travel
-        let expectedStakedAmount = (stake_amount*0.04)+(stake_amount*2)
+        let expectedStakedAmount = (stake_amount*0.08)+(stake_amount*2)
 
         //the expected total amount should be the expected staked amount above *0.02
         // because that's how long we time traveled since the last stake
         //plus
         //the expected staked amount
-        let expectedTotalAmount = (expectedStakedAmount*0.02)+expectedStakedAmount
+        let expectedTotalAmount = (expectedStakedAmount*0.04)+expectedStakedAmount
 
         assert.equal(stake.stakedAmount.toString(), Math.floor(expectedStakedAmount),
             "actual and expected staked amounts are not equal")
@@ -268,7 +268,7 @@ contract("BetterTimesToken", async accounts => {
         //pulling some of the values from the last test:
         let stake_amount=1000;
         let timeTraveler = accounts[2]
-        let expectedStakedAmount = (stake_amount*0.04)+(stake_amount*2)
+        let expectedStakedAmount = (stake_amount*0.08)+(stake_amount*2)
         let alreadyAdvanced = 20 //hours since the last stake in the previous test
 
         //let's advance time up to an hour before the deadline:
@@ -279,7 +279,7 @@ contract("BetterTimesToken", async accounts => {
         let stake = await betterTimesToken.hasStake(timeTraveler);
 
         //calculating stake multiplier, which is based on the amount of hours passed since the last stake:
-        let stakeMultiplier = 167 * 0.001
+        let stakeMultiplier = 167 * 0.002
 
         //calculating expected totalAmount:
         let expectedTotalAmount = (expectedStakedAmount*stakeMultiplier)+expectedStakedAmount
@@ -288,9 +288,9 @@ contract("BetterTimesToken", async accounts => {
         assert.equal(stake.totalAmount.toString(), Math.floor(expectedTotalAmount),
             "actual and expected total amounts are not equal just before deadline")
 
-        //let's advance one hour more, thus passing the deadline::
+        //let's advance a couple hours more, thus passing the deadline::
         let oneWeek= 168 //hours
-        await helper.advanceTimeAndBlock(3600*1.1);
+        await helper.advanceTimeAndBlock(3600*2);
 
         stake = await betterTimesToken.hasStake(timeTraveler);
 
@@ -339,8 +339,30 @@ contract("BetterTimesToken", async accounts => {
         let stake = await betterTimesToken.hasStake(timeTraveler)
 
         //check that the value has been updated. After 100 hours, the stake amount should have increased by 0.1
-        assert.equal(stake.totalAmount.toNumber(), stake_amount+(stake_amount*0.1),
+        assert.equal(stake.totalAmount.toNumber(), stake_amount+(stake_amount*0.2),
             "stake amount not as expected")
+    })
+
+    it("cannot call the stake function without specifying the correct timeframe", async () => {
+        let stake_amount= 100
+        let timeTraveler = accounts[2]
+        try {await betterTimesToken.stakeOne(stake_amount, myDeed, 4, {from: timeTraveler})}
+        catch (e) {
+            assert.equal(e.reason, "timeframe value not valid" )
+            return
+        }
+        assert(false);
+    })
+
+    it("testing approve and transfer with sacredMessage", async () => {
+        //giving 100 coins for staking to different 3 different accounts:
+        let accountOne =  accounts[3]
+        let accountTwo = accounts[4]
+        let accountThree = accounts[5]
+
+        betterTimesToken.approve
+
+
     })
 
 
