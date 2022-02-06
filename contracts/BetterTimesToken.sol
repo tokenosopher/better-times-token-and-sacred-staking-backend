@@ -35,7 +35,7 @@ contract BetterTimesToken is ERC20, Ownable, SacredCoin, SacredStakeable {
     }
 
     function SacredMessageTwo(string memory name, string memory story) private {
-        emit SacredEvent(string(abi.encodePacked(name, "'s hard times story is ", story)));
+        emit SacredEvent(string(abi.encodePacked(name, "'s challenging times story is ", story)));
     }
 
     function transferSacredOne(address to, uint tokens, string memory yourDeeds) public {

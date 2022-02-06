@@ -11,7 +11,7 @@ const myStory = "I don't have one"
 
 //expected sacredEvents content based on the values above:
 const expectedSacredEventOne= "Lately, I helped to remove poverty from the world by working on the sacred coin."
-const expectedSacredEventTwo= "Narcis's hard times story is I don't have one"
+const expectedSacredEventTwo= "Narcis's challenging times story is I don't have one"
 
 contract("BetterTimesToken", async accounts => {
 
