@@ -360,7 +360,7 @@ contract("BetterTimesToken", async accounts => {
         let accountTwo = accounts[4]
         let accountThree = accounts[5]
 
-        betterTimesToken.approve
+        // betterTimesToken.approve
 
 
     })

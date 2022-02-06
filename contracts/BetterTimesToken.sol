@@ -15,7 +15,7 @@ contract BetterTimesToken is ERC20, Ownable, SacredCoin, SacredStakeable {
         * @dev minting 679 million coins, an estimate of how much people are living in poverty at the moment of
         * the coin creation
         */
-        _mint(msg.sender, 679000000 * 10 ** decimals());
+        _mint(msg.sender, 1000000 * 10 ** decimals());
 
         /**
         * @dev calling the setGuideline function to create 2 guidelines:
@@ -30,26 +30,6 @@ contract BetterTimesToken is ERC20, Ownable, SacredCoin, SacredStakeable {
 
     event SacredEvent(string BetterTimesMessage);
 
-    /**
-    * @dev Whitelist that has the ability to emit events.
-    */
-    modifier onlyWhitelistedToCallSacredMessages() {
-        require(isInSacredMessagesWhitelist(msg.sender), "only whitelisted addresses can call this function");
-        _;
-    }
-
-    function isInSacredMessagesWhitelist(address _address) public view returns (bool) {
-        return WhitelistedToCallSacredMessages[_address];
-    }
-
-    function addToSacredMessagesWhitelist(address _whitelistedAddress) public onlyOwner {
-        WhitelistedToCallSacredMessages[_whitelistedAddress]=true;
-    }
-
-    function removeFromSacredMessagesWhitelist(address _whitelistedAddress) public onlyOwner{
-        WhitelistedToCallSacredMessages[_whitelistedAddress]=false;
-    }
-
     function SacredMessageOne(string memory yourDeeds) private {
         emit SacredEvent(string(abi.encodePacked("Lately, I helped to remove poverty from the world by ", yourDeeds)));
     }
@@ -63,9 +43,19 @@ contract BetterTimesToken is ERC20, Ownable, SacredCoin, SacredStakeable {
         SacredMessageOne(yourDeeds);
     }
 
-    function transferSacredTwo(address to, uint tokens, string memory name, string memory gratitudeObject) public {
+    function transferSacredTwo(address to, uint tokens, string memory name, string memory story) public {
         super.transfer(to, tokens);
-        SacredMessageTwo(name, gratitudeObject);
+        SacredMessageTwo(name, story);
+    }
+
+    function approveSacredOne(address spender, uint256 amount, string memory yourDeeds) public {
+        super.approve(spender, amount);
+        SacredMessageOne(yourDeeds);
+    }
+
+    function approveSacredTwo(address spender, uint256 amount, string memory name, string memory story) public {
+        super.approve(spender, amount);
+        SacredMessageTwo(name, story);
     }
 
     function transferFromSacredOne(address sender, address recipient, uint256 amount, string memory yourDeeds) public {
@@ -73,7 +63,13 @@ contract BetterTimesToken is ERC20, Ownable, SacredCoin, SacredStakeable {
         SacredMessageOne(yourDeeds);
     }
 
-    function transferFromSacredTwo(address sender, address recipient, uint256 amount, string memory name, string memory story) public {
+    function transferFromSacredTwo(
+        address sender,
+        address recipient,
+        uint256 amount,
+        string memory name,
+        string memory story
+    ) public {
         super.transferFrom(sender, recipient, amount);
         SacredMessageTwo(name, story);
     }
@@ -85,6 +81,7 @@ contract BetterTimesToken is ERC20, Ownable, SacredCoin, SacredStakeable {
     function stake(uint256 _amount, uint8 timeframe) internal {
         // Make sure staker actually is good for it
         require(_amount < balanceOf(msg.sender), "BetterTimesToken: Cannot stake more than you own");
+        require(totalSupply() <= 679000000000000000000000000, "BetterTimesToken: supply has reached 679 million");
 
         _stake(_amount, timeframe);
         // Burn the amount of tokens on the sender
