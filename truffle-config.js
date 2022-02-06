@@ -73,6 +73,24 @@ module.exports = {
             },
             network_id: 1
         },
+
+        mumbai: {
+            provider: function () {
+                // Setting the provider with the Infura Rinkeby address and Token
+                return new HDWalletProvider(mnemonic, `https://polygon-mumbai.infura.io/v3/fce3430e645d4091bd6be9e972e6045f`)
+            },
+            network_id: 80001,
+            skipDryRun: true
+        },
+
+        polygon_main: {
+            provider: function () {
+                // Setting the provider with the Infura Rinkeby address and Token
+                return new HDWalletProvider(mnemonic_main_account, `https://polygon-mainnet.infura.io/v3/${process.env.INFURA_POLYGON_MAIN}`)
+            },
+            network_id: 137,
+            skipDryRun: true
+        }
     },
 
     // Another network with more advanced options...
@@ -142,4 +160,8 @@ module.exports = {
     //   }
     // }
     // }
+    plugins: ['truffle-plugin-verify'],
+    api_keys: {
+        polygonscan: process.env.POLYGONSCAN_API_KEY
+    }
 };

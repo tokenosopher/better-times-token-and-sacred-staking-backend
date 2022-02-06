@@ -200,7 +200,9 @@ contract SacredStakeable {
         uint256 stakedAmount,
         uint256 claimableReward,
         uint256 totalAmount,
-        uint256 SecondsToEndOfStakingRewards)
+        uint256 StakingDeadlineInSeconds,
+        uint256 StakingUnlockInSeconds
+    )
 
     {
         uint256 user_index = stakes[_staker];
@@ -210,14 +212,16 @@ contract SacredStakeable {
             stakedAmount=0;
             claimableReward=0;
             totalAmount=0;
-            SecondsToEndOfStakingRewards=0;
+            StakingDeadlineInSeconds=0;
+            StakingUnlockInSeconds=0;
         } else {
             isStaking=true;
             stakedAmount = stakeholders[user_index].amount;
             claimableReward = calculateStakeReward(stakeholders[user_index]);
             totalAmount= stakedAmount+ claimableReward;
-            SecondsToEndOfStakingRewards = block.timestamp - stakeholders[user_index].since + stakeholders[user_index].timeframe;
+            StakingDeadlineInSeconds = stakeholders[user_index].since + stakeholders[user_index].timeframe;
+            StakingUnlockInSeconds = stakeholders[user_index].since + 3 days;
         }
-        return (isStaking, stakedAmount, claimableReward, totalAmount, SecondsToEndOfStakingRewards);
+        return (isStaking, stakedAmount, claimableReward, totalAmount, StakingDeadlineInSeconds, StakingUnlockInSeconds);
     }
 }
