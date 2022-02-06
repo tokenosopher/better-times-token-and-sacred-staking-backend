@@ -104,18 +104,36 @@ contract("BetterTimesToken", async accounts => {
     // it("calling the hasStake function will ")
 
     it("withdrawing stake leads to isStaking being false, and StakingSummary being 0,0", async () => {
-        // Stake again on owner because we want to check if the 2nd iteration takes place correctly:
+
+        //fast forward 3 days to be able to withdraw stake:
+        await helper.advanceTimeAndBlock(3600*72);
 
         await betterTimesToken.withdrawStake({from:owner});
+
         let hasStake = await betterTimesToken.hasStake(owner)
         assert.equal(hasStake.isStaking, false, "staking should be false.")
         assert.equal(hasStake.totalAmount, 0, "staking amount should be zero")
         assert.equal(hasStake.SecondsToEndOfStakingRewards, 0, "Time to staking rewards should be 0")
     })
 
-    it("withdrawing stake places the entire amount of coins back into the staker's wallet", async () => {
+    it("withdrawing stake places the entire amount of coins back into the staker's wallet plus rewards", async () => {
+
+        //retrieving how much was staked by the owner in order to calculate the total amount:
+        let stakedThusFar = 100*2
+
+        //calculating reward
+        // 72- amount of time that we advanced;
+        // 0.002 - the reward per hour, based on the 1 week timespan that we selected when we staked.
+        let reward = stakedThusFar*(72*0.002)
+
+        //calculating expected total amount to exist in the account after withdrawing what was staked + reward:
+        let expectedTotalAmount =1000000000000000000000000 + reward
+
+        //rounding off to compare to the actual value retrieved:
+        expectedTotalAmount = Math.floor(expectedTotalAmount)
+
         let balanceAmount = await betterTimesToken.balanceOf(owner)
-        assert.equal(balanceAmount.toString(), "679000000000000000000000000", "returned amount is not right")
+        assert.equal(balanceAmount.toString(), expectedTotalAmount, "returned amount is not right")
     })
 
     it("token holder should be able to transfer tokens to someone else, via all three transfer methods", async () => {

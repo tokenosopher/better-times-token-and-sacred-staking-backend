@@ -174,9 +174,12 @@ contract SacredStakeable {
      * _withdrawStake withdraws the entire stake to the owner's account:
     */
     function _withdrawStake() internal returns(uint256){
+
         // Grab user_index which is the index to use to grab the Stake[]
         uint256 user_index = stakes[msg.sender];
         require(user_index!=0,"you do not have any coins staked");
+        require(stakeholders[user_index].since+3 days<block.timestamp,
+            "you have to wait a minimum of 3 days before you can withdraw a stake");
 
         uint256 currentAmount = stakeholders[user_index].amount;
 
