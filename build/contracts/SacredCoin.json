@@ -5945,7 +5945,7 @@
   },
   "networks": {},
   "schemaVersion": "3.4.3",
-  "updatedAt": "2022-02-05T23:46:49.907Z",
+  "updatedAt": "2022-02-06T03:22:08.345Z",
   "devdoc": {
     "details": "A protocol to build an ERC20 token that allows for the creation of guidelines, or recommendations on how to use the coin that are intended for the those who interact with it. Works in conjunction with an ERC20 implementation, such as the OpenZeppelin ERC20 contract. To understand the philosophy behind it, visit: https://sacredcoinprotocol.com To see examples on how to use this contract go to the GitHub page: https://github.com/tokenosopher/sacred-coin-protocol",
     "events": {
