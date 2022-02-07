@@ -86,7 +86,7 @@ module.exports = {
         polygon_main: {
             provider: function () {
                 // Setting the provider with the Infura Rinkeby address and Token
-                return new HDWalletProvider(mnemonic_main_account, `https://polygon-mainnet.infura.io/v3/${process.env.INFURA_POLYGON_MAIN}`)
+                return new HDWalletProvider(mnemonic_main_account, `https://polygon-mainnet.infura.io/v3/fce3430e645d4091bd6be9e972e6045f`)
             },
             network_id: 137,
             skipDryRun: true
