@@ -1,6 +1,6 @@
 const Migrations = artifacts.require("Migrations");
 
-var publicChains = ['ethereum_live', 'ethereum_live-fork', 'development'];
+var publicChains = ['ethereum_live', 'ethereum_live-fork', 'development', 'polygon_main'];
 
 module.exports = function (deployer, network) {
   console.log(network);

@@ -113,7 +113,6 @@ contract("BetterTimesToken", async accounts => {
         let hasStake = await betterTimesToken.hasStake(owner)
         assert.equal(hasStake.isStaking, false, "staking should be false.")
         assert.equal(hasStake.totalAmount, 0, "staking amount should be zero")
-        assert.equal(hasStake.SecondsToEndOfStakingRewards, 0, "Time to staking rewards should be 0")
     })
 
     it("withdrawing stake places the entire amount of coins back into the staker's wallet plus rewards", async () => {
@@ -127,7 +126,7 @@ contract("BetterTimesToken", async accounts => {
         let reward = stakedThusFar*(72*0.002)
 
         //calculating expected total amount to exist in the account after withdrawing what was staked + reward:
-        let expectedTotalAmount =1000000000000000000000000 + reward
+        let expectedTotalAmount =999900000000000000000000 + reward
 
         //rounding off to compare to the actual value retrieved:
         expectedTotalAmount = Math.floor(expectedTotalAmount)
